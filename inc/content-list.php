@@ -7,7 +7,13 @@
                 <img src="<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'misc-thumb' );
 				echo $image[0]; ?>" alt="<?php the_title(); ?>"/>
 			<?php else : ?>
-                <img src="<?php echo get_option( 'def_banner' ); ?>" alt="<?php the_title(); ?>">
+				<?php
+				if ( get_option( 'def_banner' ) == '' ) {
+					echo '';
+				} else {
+					echo '<img src="' . _e( get_option( "def_banner" ) ) . '" alt="' . the_title() . '" />';
+				}
+				?>
 			<?php endif; ?>
         </a>
         <h3><?php the_title(); ?></h3>

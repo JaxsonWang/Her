@@ -26,7 +26,7 @@ if ( $my_query->have_posts() ) { ?>
 
 <div class="post-related">
     <div class="post-box">
-        <h4 class="post-box-title"><?php _e( 'You Might Also Like', 'solopine' ); ?></h4>
+        <h4 class="post-box-title"><?php _e( '更多文章' ); ?></h4>
     </div>
 	<?php while ( $my_query->have_posts() ) {
 		$my_query->the_post(); ?>
@@ -37,7 +37,13 @@ if ( $my_query->have_posts() ) { ?>
                         <img src="<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'misc-thumb' );
 						echo $image[0]; ?>" alt="<?php the_title(); ?>"/>
 					<?php else : ?>
-                        <img src="<?php echo get_option( 'def_banner' ); ?>" alt="<?php the_title(); ?>">
+						<?php
+						if ( get_option( 'def_banner' ) == '' ) {
+							echo '';
+						} else {
+							echo '<img src="' . _e( get_option( "def_banner" ) ) . '" alt="' . the_title() . '" />';
+						}
+						?>
 					<?php endif; ?>
                 </a>
                 <h3><?php the_title(); ?><br/><?php echo mutheme_time_since( strtotime( $post->post_date_gmt ) ); ?>

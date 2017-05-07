@@ -132,10 +132,6 @@ strong, b {
     font-weight: 400;
 }
 
-em, i {
-    font-style: italic;
-}
-
 p {
     margin: 0 0 12px 0;
     letter-spacing: 0.05rem;
@@ -144,8 +140,7 @@ p {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     line-height: 1.2;
-    margin: 0 0 0 0;
-    text-transform: uppercase;
+    margin: 0 0 13px 0;
     letter-spacing: 0.275rem;
 }
 
@@ -155,27 +150,27 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 h1 {
-    font-size: 1.4em;
+    font-size: 1.5em;
 }
 
 h2 {
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 h3 {
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 h4 {
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 h5 {
-    font-size: 0.9em;
+    font-size: 1.1em;
 }
 
 h6 {
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 @media screen and (max-width: 736px) {
@@ -208,7 +203,6 @@ sup {
 
 blockquote {
     border-left: solid 4px;
-    font-style: italic;
     margin: 0 0 2em 0;
     padding: 0.5em 0 0.5em 2em;
 }
@@ -264,10 +258,6 @@ input, select, textarea {
 
 a {
     color: inherit;
-}
-
-a:hover {
-    color: #EF6480 !important;
 }
 
 strong, b {
@@ -334,7 +324,6 @@ hr {
     -webkit-font-smoothing: antialiased;
     font-style: normal;
     font-weight: normal;
-    text-transform: none !important;
 }
 
 .icon > .label {
@@ -814,8 +803,15 @@ table.alt tbody tr td {
 }
 
 .items .item {
-    margin: 2em 0 0 2em;
     width: calc(50% - 2em);
+}
+
+.items .item:nth-child(odd) {
+    margin: 2em 0 0 0;
+}
+
+.items .item:nth-child(even) {
+    margin: 2em 0 0 2em;
 }
 
 @media screen and (max-width: 980px) {
@@ -839,7 +835,10 @@ table.alt tbody tr td {
 
     .items .item {
         width: 100%;
-        margin: 0 0 2em 0;
+    }
+
+    .items .item:nth-child(even) {
+        margin: 2em 0 2em 0;
     }
 
     .items .item:last-child {
@@ -921,7 +920,10 @@ table.alt tbody tr td {
     flex-direction: column;
     padding: 8em 0 6em 0;
     background-size: cover;
-    background: #444 url("../img/banner.jpg") fixed center;
+    background: #444 center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
     text-align: center;
     position: relative;
     cursor: default;
@@ -1002,12 +1004,10 @@ table.alt tbody tr td {
     padding: 0 0.5em 0 0.5em;
     font-weight: 200;
     font-family: "klkregular", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", "Helvetica", "Arial", "sans-serif";
-    text-transform: none;
     letter-spacing: 0;
 }
 
 #header.alt p {
-    text-transform: uppercase;
     letter-spacing: 0.2rem;
     font-weight: 400;
     font-size: 0.8em;
@@ -1125,6 +1125,21 @@ body.is-loading #header.alt .inner {
         display: none;
     }
 
+}
+
+/*主内容*/
+.post-entry h3::before {
+    content: "[";
+    margin-right: 5px;
+    color: #FF6D6D;
+    font-size: 25px
+}
+
+.post-entry h3::after {
+    content: "]";
+    margin-left: 5px;
+    color: #FF6D6D;
+    font-size: 25px
 }
 
 /* CTA */
@@ -1251,7 +1266,6 @@ body.is-loading #header.alt .inner {
 
 #nav-wrapper .menu li a {
     font-size: 10px;
-    text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 51px;
     color: #000;
@@ -1321,36 +1335,12 @@ body.is-loading #header.alt .inner {
 
 }
 
-/*** Social Icons ***/
-#top-social {
-    position: absolute;
-    right: 185px;
-    top: 0;
-}
-
-#top-social.nosearch {
-    right: 0;
-}
-
-#top-social a {
-    color: #000;
-    font-size: 14px;
-    margin-left: 10px;
-    line-height: 51px;
-}
-
-#top-social a:hover {
-    color: #C69F73;
-}
-
 /*** Top Search ***/
 #top-search {
     position: absolute;
     right: 0;
     top: 0;
     padding-left: 16px;
-    border-left: 1px solid;
-    border-color: #e8e8e8;
     z-index: 999;
 }
 
@@ -1360,7 +1350,6 @@ body.is-loading #header.alt .inner {
 
 #top-search input {
     border: none;
-    font-style: italic;
     width: 135px;
     background: transparent;
 }
@@ -1401,7 +1390,6 @@ i.search-toggle {
     box-shadow: 0 5px 4px -4px rgba(190, 190, 190, .1);
     border: 1px solid #eee;
     padding: 10px 0 10px 10px;
-    font-style: italic;
 }
 
 .show-search input:focus {
@@ -1453,7 +1441,6 @@ i.search-toggle {
 .post-entry blockquote p {
     font-size: 14px;
     line-height: 24px;
-    font-style: italic;
     color: #999;
 }
 
@@ -1529,7 +1516,6 @@ i.search-toggle {
 
 .post-box-title {
     letter-spacing: 2px;
-    text-transform: uppercase;
     margin-bottom: 30px;
     font-weight: 700;
     border-bottom: 1px solid #ddd;
@@ -1574,7 +1560,6 @@ i.search-toggle {
 .post-tags a {
     font-size: 10px;
     letter-spacing: 1px;
-    text-transform: uppercase;
     background: #f2f2f2;
     color: #666;
     padding: 7px 8px;
@@ -1633,21 +1618,12 @@ i.search-toggle {
 }
 
 .author-content a i {
-    font-size: 26px !important;
-    padding: 6px 0 0 0;
-    margin: 0 10px;
-    width: 40px;
-    height: 40px;
-    color: #fff;
-    background: #999;
-    border: 1px solid #999;
-    border-radius: 50%;
+    font-size: 25px;
+    margin-left: 5px;
 }
 
 .author-content a i:hover {
-    color: #fff;
-    background: #E84893;
-    border: 1px solid #E84893;
+    color: #E84893;
 }
 
 /*** Comments ***/
@@ -1661,7 +1637,6 @@ i.search-toggle {
 }
 
 .post-comments a:hover {
-    color: #E84893;
     text-decoration: none;
     text-shadow: none;
 }
@@ -1692,7 +1667,6 @@ i.search-toggle {
 .thecomment .comment-text span.author, .thecomment .comment-text span.author a {
     display: block;
     font-size: 14px;
-    text-transform: uppercase;
     letter-spacing: 0;
     margin-bottom: 6px;
     color: #c69f73;
@@ -1706,7 +1680,6 @@ i.search-toggle {
 .thecomment .comment-text span.date {
     font-size: 12px;
     color: #999;
-    font-style: italic;
     display: block;
     margin-bottom: 6px;
 }
@@ -1732,7 +1705,7 @@ i.search-toggle {
 .post-comments span.reply a {
     float: right;
     font-size: 10px;
-    background-color: #f2e929;
+    background-color: #444;
     color: #FFF;
     padding: 2px 5px 4px 5px;
     border-radius: 3px;
@@ -1745,12 +1718,11 @@ i.search-toggle {
 }
 
 .post-comments span.reply a.comment-edit-link {
-    background: #f2e929;
+    background: #444;
 }
 
 .post-comments span.reply a:hover {
     opacity: .8;
-    background-color: #ef7fb3;
 
 }
 
@@ -1784,9 +1756,7 @@ i.search-toggle {
     color: #999;
     font-weight: 700;
     margin-bottom: 20px;
-
     letter-spacing: 2px;
-    text-transform: uppercase;
 }
 
 #respond h3 a {
@@ -1795,7 +1765,6 @@ i.search-toggle {
 }
 
 #respond h3 small a {
-    text-transform: uppercase;
     font-size: 12px;
     background: #333;
     color: #FFF;
@@ -1858,7 +1827,6 @@ i.search-toggle {
 }
 
 #respond #submit {
-    text-transform: uppercase;
     letter-spacing: 2px;
     background: #eee;
     font-size: 12px;
@@ -1887,15 +1855,20 @@ i.search-toggle {
 /***********************/
 
 .pagination {
-    width: 80%;
+    width: 77%;
     margin: 30px 10% 20px 10%;
     overflow: hidden;
+}
+
+@media screen and (max-width: 980px) {
+    .pagination {
+        width: 80%;
+    }
 }
 
 .pagination a {
     display: inline-block;
     letter-spacing: 2px;
-    text-transform: uppercase;
     font-size: 12px;
     border-bottom: 1px solid #e5e5e5;
     padding-bottom: 5px;
@@ -1935,52 +1908,17 @@ body ::-moz-selection {
     text-shadow: none;
 }
 
-/*—滚动条默认显示样式–*/
-::-webkit-scrollbar-thumb {
-    background-color: #999;
-    height: 50px;
-    outline-offset: -1px;
-    outline: 1px solid #fff;
-    -webkit-border-radius: 0;
-    border: 1px solid #fff;
-}
-
-/*—鼠标点击滚动条显示样式–*/
-::-webkit-scrollbar-thumb:hover {
-    background-color: #E84893;
-    height: 50px;
-    -webkit-border-radius: 0;
-}
-
-/*—滚动条大小–*/
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-/*—滚动框背景样式–*/
-::-webkit-scrollbar-track-piece {
-    background-color: #fff;
-    -webkit-border-radius: 0;
-}
-
 /*****
 /* 文章归档页面
 /********************/
 
 .iconxxx {
-    width: 64px;
-    height: 64px;
     color: rgba(0, 0, 0, .6);;
     margin: 20px auto 10px;
-    border: 1px solid rgba(0, 0, 0, .6);;
-    border-radius: 50%;
 }
 
-.iconxxx:hover {
-    color: #fff;
-    background-color: #E84893;
-    border: 1px solid #E84893;
+.iconxxx i.iconfont {
+    font-size: 35px;
 }
 
 .fa-2x {
@@ -2109,7 +2047,6 @@ body ::-moz-selection {
 
 .instagram-title {
     font-size: 16px;
-    text-transform: uppercase;
     margin-bottom: 22px;
 }
 
@@ -2159,6 +2096,10 @@ body ::-moz-selection {
     text-align: center !important;
     font-size: 100px !important;
     color: #283a44;
+}
+
+.p404 i.iconfont {
+    font-size: 100px;
 }
 
 .nothing {
@@ -2213,7 +2154,6 @@ body ::-moz-selection {
     padding: 2px 5px;
     background-color: #fff;
     box-shadow: 1px 2px 1px rgba(94, 93, 99, .08), 0 1px 2px rgba(61, 60, 66, .12);
-    text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
     font-size: 11px;
@@ -2270,7 +2210,7 @@ body ::-moz-selection {
     max-height: 200px;
     padding: 24px;
     box-sizing: border-box;
-    border-bottom: 3px solid #f2e929;
+    border-bottom: 3px solid #444;
     color: rgba(0, 0, 0, .6);
     box-shadow: 0 1px 2px rgba(0, 0, 0, .15), 0 0 1px rgba(0, 0, 0, .15);
     border-radius: 3px;

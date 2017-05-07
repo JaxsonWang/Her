@@ -21,9 +21,9 @@
 
             <section class="error-404 not-found">
                 <div class="author-content">
-                    <div class="p404"><i class="fa fa-cog fa-spin"></i></div>
-                    <h2><?php _e( 'Oops!<br><br> That page can&rsquo;t be found.', 'Her' ); ?></h2>
-                    <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'Her' ); ?></p>
+                    <div class="p404"><i class="iconfont icon-404"></i></div>
+                    <h2><?php _e( '哇哦！<br><br> 你找的页面好像被猫吃掉了！' ); ?></h2>
+                    <p><?php _e( '请尝试再次使用一些不同的关键字' ); ?></p>
 					<?php get_search_form(); ?>
                 </div><!-- .page-header -->
             </section><!-- .error-404 -->

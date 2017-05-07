@@ -9,7 +9,13 @@
 
 <section id="primary" class="content-area">
     <main class="full-page">
-		<?php the_author_meta( 'description' ) ?>
+	    <?php
+	    if ( get_option( 'def_banner' ) == '' ) {
+		    echo "no data";
+	    } else {
+		    echo "yes";
+	    }
+	    ?>
     </main>
 </section>
 

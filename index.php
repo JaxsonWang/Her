@@ -47,6 +47,7 @@
                 <div class="author-content">
                     <h2><?php the_author_posts_link(); ?></h2>
                     <p><?php the_author_meta( 'description' ); ?></p>
+	                <?php get_template_part( 'inc/social' ); ?>
                 </div>
             </section>
 		<?php } ?>

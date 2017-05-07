@@ -67,7 +67,9 @@ function solopine_load_scripts() {
 	wp_register_style( 'sp_style', get_stylesheet_directory_uri() . '/style.css' );
 	wp_register_style( 'slicknav-css', get_template_directory_uri() . '/css/slicknav.css' );
 	wp_register_style( 'responsive', get_template_directory_uri() . '/css/responsive.css' );
-	wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
+
+	wp_register_style( 'alifonts', '//at.alicdn.com/t/font_noao97coqwfusor.css' );
+	//wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
 
 	wp_register_script( 'slicknav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', 'jquery', '', true );
 	wp_register_script( 'fitvids', get_template_directory_uri() . '/js/fitvids.js', 'jquery', '', true );
@@ -76,7 +78,7 @@ function solopine_load_scripts() {
 	// Enqueue scripts and styles
 	wp_enqueue_style( 'sp_style' );
 	wp_enqueue_style( 'slicknav-css' );
-	wp_enqueue_style( 'font-awesome' );
+	wp_enqueue_style( 'alifonts' );
 	wp_enqueue_style( 'responsive' );
 
 	// JS
@@ -112,15 +114,15 @@ function solopine_comments( $comment, $args, $depth ) {
             <div class="comment-text">
 					<span class="reply">
 						<?php comment_reply_link( array_merge( $args, array(
-							'reply_text' => __( 'Reply', 'solopine' ), 'depth' => $depth,
+							'reply_text' => __( '回复' ), 'depth' => $depth,
 							'max_depth'  => $args['max_depth']
 						) ), $comment->comment_ID ); ?>
-						<?php edit_comment_link( __( 'Edit', 'solopine' ) ); ?>
+						<?php edit_comment_link( __( '编辑' ) ); ?>
 					</span>
                 <span class="author"><?php echo get_comment_author_link(); ?></span>
-                <span class="date"><?php printf( __( '%1$s at %2$s', 'solopine' ), get_comment_date(), get_comment_time() ) ?></span>
+                <span class="date"><?php printf( __( '%1$s at %2$s' ), get_comment_date(), get_comment_time() ) ?></span>
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-                    <em><i class="icon-info-sign"></i> <?php _e( 'Comment awaiting approval', 'solopine' ); ?></em>
+                    <em><i class="icon-info-sign"></i> <?php _e( '评论待审核' ); ?></em>
                     <br/>
 				<?php endif; ?>
 				<?php comment_text(); ?>
@@ -143,8 +145,8 @@ function solopine_pagination() {
 
     <div class="pagination">
 
-        <div class="older"><?php next_posts_link( __( '往前一步是黄昏 <i class="fa fa-angle-double-right"></i>', 'solopine' ) ); ?></div>
-        <div class="newer"><?php previous_posts_link( __( '<i class="fa fa-angle-double-left"></i> 退后一步是人生', 'solopine' ) ); ?></div>
+        <div class="older"><?php next_posts_link( __( '下一页 <i class="iconfont icon-right"></i>' ) ); ?></div>
+        <div class="newer"><?php previous_posts_link( __( '<i class="iconfont icon-weibiaoti6"></i> 上一页' ) ); ?></div>
 
     </div>
 

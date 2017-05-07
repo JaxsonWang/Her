@@ -4,7 +4,7 @@
 	<?php
 	if ( comments_open() ) :
 		echo '<div class="post-box"><h4 class="post-box-title">';
-		comments_number( __( 'No Comments', 'solopine' ), __( '1 Comment', 'solopine' ), '% ' . __( 'Comments', 'solopine' ) );
+		comments_number( __( '暂无评论' ), __( '1条评论' ), '% ' . __( '条评论' ) );
 		echo '</h4></div>';
 	endif;
 
@@ -31,9 +31,9 @@
 		'comment_notes_after'  => '',
 		'logged_in_as'         => '',
 		'comment_notes_before' => '',
-		'title_reply'          => __( 'Leave a Reply', 'solopine' ),
-		'cancel_reply_link'    => __( 'Cancel Reply', 'solopine' ),
-		'label_submit'         => __( 'Post Comment', 'solopine' )
+		'title_reply'          => __( '发表评论' ),
+		'cancel_reply_link'    => __( '取消回复' ),
+		'label_submit'         => __( '发送评论' )
 	) );
 	?>
 

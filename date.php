@@ -19,7 +19,13 @@
 		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' );
 		echo $image[0]; ?>
 	<?php else : ?>
-            ../img/banner.jpg
+		<?php
+		if ( get_option( 'def_banner' ) == '' ) {
+			echo get_template_directory_uri() . '/img/banner.jpg';
+		} else {
+			echo get_option( "def_banner" );
+		}
+		?>
 	<?php endif; ?>
             );">
         <div class="inner">

@@ -6,9 +6,8 @@
 
             <section id="search-header" class="main">
                 <div class="author-content">
-                    <div class="p404"><i class="fa fa-fort-awesome"></i></div>
-                    <h2><?php _e( 'Search results for', 'solopine' ); ?>
-                        【<?php printf( __( '%s', 'solopine' ), get_search_query() ); ?>】</h2>
+                    <div class="p404"><i class="iconfont icon-mengchong"></i></div>
+                    <h2><?php _e( '搜索结果' ); ?>：<?php printf( __( '%s' ), get_search_query() ); ?></h2>
                 </div><!-- .page-header -->
             </section>
 

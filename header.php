@@ -83,8 +83,8 @@
 
             <div id="top-search">
 				<?php get_search_form(); ?>
-                <i class="fa fa-search search-desktop"></i>
-                <i class="fa fa-search search-toggle"></i>
+                <i class="iconfont icon-sousuo-sousuo search-desktop"></i>
+                <i class="iconfont icon-sousuo-sousuo search-toggle"></i>
             </div>
 
 
@@ -96,10 +96,6 @@
 		<?php endif; ?>
 
 		<?php if ( ! get_theme_mod( 'sp_topbar_social_check' ) ) : ?>
-            <div id="top-social"
-			     <?php if ( get_theme_mod( 'sp_topbar_search_check' ) ) : ?>class="nosearch"<?php endif; ?>>
-				<?php get_template_part( 'inc/social' ); ?>
-            </div>
 		<?php endif; ?>
     </div>
 
@@ -112,7 +108,13 @@
 		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' );
 		echo $image[0]; ?>
 	<?php else : ?>
-		<?php echo get_option( 'def_banner' ); ?>
+		<?php
+		if ( get_option( 'def_banner' ) == '' ) {
+			echo get_template_directory_uri() . '/img/banner.jpg';
+		} else {
+			echo get_option( "def_banner" );
+		}
+		?>
 	<?php endif; ?>
             );">
         <div class="inner">

@@ -22,7 +22,7 @@
 						echo '
                 <li class="link-meta">
                     <a href="' . $bookmark->link_url . '" title="' . $bookmark->link_description . '" target="_blank" >
-                    <img class="link-img" src="https://api.thumbalizr.com/?url=' . $bookmark->link_url . '&width=250">
+                    <img class="link-img" src="//api.thumbalizr.com/?url=' . $bookmark->link_url . '&width=250">
                     </a>
                     <span class="link-sitename">' . $bookmark->link_name . '</span>
                     <a class="link-avator">' . get_avatar( $bookmark->link_notes, 64 ) . ' </a>
