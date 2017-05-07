@@ -8,8 +8,8 @@
     </p>
 </footer>
 
-<!-- Scripts -->
 
+<a href="#" class="back2top" style="display:none;"><i class="iconfont icon-huidaodingbu"></i></a>
 
 <?php wp_footer(); ?>
 </body>

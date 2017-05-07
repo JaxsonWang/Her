@@ -24,6 +24,7 @@
  * @since Her 2.0
  */
 
+define( 'HER_VERSION', '1.0' );
 
 //////////////////////////////////////////////////////////////////
 // Theme set up
@@ -64,28 +65,27 @@ add_action( 'wp_enqueue_scripts', 'solopine_load_scripts' );
 function solopine_load_scripts() {
 
 	// Register scripts and styles
-	wp_register_style( 'sp_style', get_stylesheet_directory_uri() . '/style.css' );
-	wp_register_style( 'slicknav-css', get_template_directory_uri() . '/css/slicknav.css' );
-	wp_register_style( 'responsive', get_template_directory_uri() . '/css/responsive.css' );
+	wp_register_style( 'sp_style', get_stylesheet_directory_uri() . '/style.css', array(), HER_VERSION, 'all' );
+	wp_register_style( 'main_style', get_stylesheet_directory_uri() . '/css/main.css', array(), HER_VERSION, 'all' );
+	wp_register_style( 'slicknav-css', get_template_directory_uri() . '/css/slicknav.css', array(), HER_VERSION, 'all' );
+	wp_register_style( 'responsive', get_template_directory_uri() . '/css/responsive.css', array(), HER_VERSION, 'all' );
+	wp_register_style( 'alifonts', '//at.alicdn.com/t/font_3nut7ugnvto11yvi.css', array(), HER_VERSION, 'all' );
 
-	wp_register_style( 'alifonts', '//at.alicdn.com/t/font_noao97coqwfusor.css' );
-	//wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
-
-	wp_register_script( 'slicknav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', 'jquery', '', true );
-	wp_register_script( 'fitvids', get_template_directory_uri() . '/js/fitvids.js', 'jquery', '', true );
-	wp_register_script( 'sp_scripts', get_template_directory_uri() . '/js/solopine.js', 'jquery', '', true );
+	wp_register_script( 'jquery_js', '//cdn.staticfile.org/jquery/1.12.4/jquery.min.js', array(), HER_VERSION, true );
+	wp_register_script( 'slicknav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array(), HER_VERSION, true );
+	wp_register_script( 'functions', get_template_directory_uri() . '/js/functions.js', array(), HER_VERSION, true );
 
 	// Enqueue scripts and styles
 	wp_enqueue_style( 'sp_style' );
+	wp_enqueue_style( 'main_style' );
 	wp_enqueue_style( 'slicknav-css' );
 	wp_enqueue_style( 'alifonts' );
 	wp_enqueue_style( 'responsive' );
 
 	// JS
-	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'jquery_js' );
 	wp_enqueue_script( 'slicknav' );
-	wp_enqueue_script( 'fitvids' );
-	wp_enqueue_script( 'sp_scripts' );
+	wp_enqueue_script( 'functions' );
 
 
 	if ( is_singular() && get_option( 'thread_comments' ) ) {

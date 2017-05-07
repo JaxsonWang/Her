@@ -36,7 +36,7 @@
 		endif;
 		?>
         <div class="inner">
-            <h1 class="post-page-title ">作者档案:<?php echo $curauth->display_name; ?></h1>
+            <h1 class="post-page-title "><?php echo $curauth->display_name; ?></h1>
             <p>个人主页：<a rel="nofollow" href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></p>
             <p>开始时间<?php the_author_meta( 'user_registered', 1 ); ?></p>
         </div>

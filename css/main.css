@@ -1,4 +1,7 @@
 /* Reset */
+/**
+ * main color :#C69F73
+ */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
@@ -711,7 +714,7 @@ table.alt tbody tr td {
 }
 
 .item header a:hover {
-    color: #EF6480 !important;
+    color: #C69F73;
 }
 
 .item header strong, .item header b {
@@ -938,7 +941,7 @@ table.alt tbody tr td {
 }
 
 #header a:hover {
-    color: #EF6480 !important;
+    color: #C69F73;
 }
 
 #header strong, #header b {
@@ -1224,6 +1227,24 @@ body.is-loading #header.alt .inner {
     content: "·";
 }
 
+.back2top {
+    position: fixed;
+    bottom: 10px;
+    right: 2%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 45px;
+    color: rgba(0, 0, 0, 1);
+    display: block;
+    z-index: 99;
+}
+
+.back2top i {
+    line-height: 42px;
+    font-size: 30px;
+}
+
 /*****
 /* Top Bar
 /********************/
@@ -1273,7 +1294,7 @@ body.is-loading #header.alt .inner {
 }
 
 #nav-wrapper .menu li.current-menu-item > a, #nav-wrapper .menu li.current_page_item > a, #nav-wrapper .menu li a:hover {
-    color: #E84893;
+    color: #C69F73;
     text-shadow: none;
 
 }
@@ -1497,7 +1518,7 @@ i.search-toggle {
 }
 
 .post a:hover {
-    color: #E84893;
+    color: #C69F73;
     text-decoration: none;
     text-shadow: none;
 }
@@ -1575,7 +1596,7 @@ i.search-toggle {
 
 .post-tags a:hover {
     color: #FFFFFF !important;
-    background-color: #E84893;
+    background-color: #C69F73;
     border-radius: 5px;
     text-decoration: none;
     text-shadow: none;
@@ -1623,7 +1644,7 @@ i.search-toggle {
 }
 
 .author-content a i:hover {
-    color: #E84893;
+    color: #C69F73;
 }
 
 /*** Comments ***/
@@ -1898,13 +1919,13 @@ i.search-toggle {
 
 body ::selection {
     color: #FFFFFF;
-    background-color: #E84893;
+    background-color: #C69F73;
     text-shadow: none;
 }
 
 body ::-moz-selection {
     color: #FFFFFF;
-    background-color: #E84893;
+    background-color: #C69F73;
     text-shadow: none;
 }
 
