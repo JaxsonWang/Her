@@ -64,7 +64,7 @@ function solopine_load_scripts() {
 	wp_register_style( 'responsive', get_template_directory_uri() . '/css/responsive.css', array(), HER_VERSION, 'all' );
 	wp_register_style( 'alifonts', '//at.alicdn.com/t/font_3nut7ugnvto11yvi.css', array(), HER_VERSION, 'all' );
 
-	wp_register_script( 'jquery_js', '//cdn.staticfile.org/jquery/1.12.4/jquery.min.js', array(), HER_VERSION, true );
+	wp_register_script( 'jquery_js', get_template_directory_uri() . '/js/jquery.min.js', array(), HER_VERSION, true );
 	wp_register_script( 'slicknav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array(), HER_VERSION, true );
 	wp_register_script( 'functions', get_template_directory_uri() . '/js/functions.js', array(), HER_VERSION, true );
 

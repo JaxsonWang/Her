@@ -10,11 +10,7 @@
 <section id="primary" class="content-area">
     <main class="full-page">
 	    <?php
-	    if ( get_option( 'def_banner' ) == '' ) {
-		    echo "no data";
-	    } else {
-		    echo "yes";
-	    }
+	    echo get_option( 'theme_blog_description' );
 	    ?>
     </main>
 </section>

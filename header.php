@@ -2,21 +2,22 @@
 <html <?php language_attributes(); ?> class="no-js">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta http-equiv="Cache-Control" content="no-transform"/>
-    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#C69F73"><!--设置移动端Chrome浏览器HeaderBar颜色-->
+    <meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?>"><!--iOS添加到主屏后的标题-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/><!--iOS强制全屏-->
+    <meta name="renderer" content="webkit"><!--强制让360浏览器使用极速模式(Chrome内核模式)-->
 	<?php
 	$description = '';
 	$keywords    = '';
 
 	if ( is_home() || is_page() ) {
 		// 将以下引号中的内容改成你的主页description
-		$description = "";
-
+		$description = get_option( 'theme_blog_description' );
 		// 将以下引号中的内容改成你的主页keywords
-		$keywords = "";
-	} elseif ( is_single() ) {
+		$keywords = get_option( 'theme_blog_keywords' );
+	} else if ( is_single() ) {
 
 		$description = get_post_meta( $post->ID, "description", true );
 
@@ -43,7 +44,19 @@
 	?>
     <meta name="description" content="<?php echo $description; ?>"/>
     <meta name="keywords" content="<?php echo $keywords; ?>"/>
-    <title><?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?><?php if ( is_home() ) { ?> - <?php bloginfo( 'description' ); ?><?php } ?></title>
+    <title><?php global $page, $paged;
+		wp_title( '-', true, 'right' );
+		bloginfo( 'name' );
+		$site_description = get_bloginfo( 'description', 'display' );
+		if ( $site_description && ( is_home() || is_front_page() ) ) {
+			echo " - $site_description";
+		}
+		if ( $paged >= 2 || $page >= 2 ) {
+			echo ' - ' . sprintf( __( '第 %s 页' ), max( $paged, $page ) );
+		} ?>
+    </title>
+
+
     <link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -57,8 +70,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-
 <div id="top-bar">
     <div class="container">
         <div id="nav-wrapper">
@@ -68,13 +79,11 @@
         <div class="menu-mobile"></div>
 		<?php if ( ! get_theme_mod( 'sp_topbar_search_check' ) ) : ?>
 
-
             <div id="top-search">
 				<?php get_search_form(); ?>
                 <i class="iconfont icon-sousuo-sousuo search-desktop"></i>
                 <i class="iconfont icon-sousuo-sousuo search-toggle"></i>
             </div>
-
 
             <!-- Responsive Search -->
             <div class="show-search">
