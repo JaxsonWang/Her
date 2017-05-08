@@ -10,9 +10,10 @@
 <section id="primary" class="content-area">
     <main class="full-page">
 	    <?php
-	    echo get_option( 'theme_blog_description' );
+	    echo get_bloginfo( 'admin_email' );
 	    ?>
     </main>
+
 </section>
 
 <?php get_footer(); ?>
