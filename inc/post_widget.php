@@ -109,12 +109,12 @@ class solopine_latest_news_widget extends WP_Widget {
 	function form( $instance ) {
 
 		/* Set up some default widget settings. */
-		$defaults = array( 'title' => __( 'Latest Posts', 'solopine' ), 'number' => 5, 'categories' => '' );
+		$defaults = array( 'title' => __( '最新页面：' ), 'number' => 5, 'categories' => '' );
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 
         <!-- Widget Title: Text Input -->
         <p>
-            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'solopine' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( '标题：' ); ?></label>
             <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>"
                    name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>"/>
         </p>
@@ -140,7 +140,7 @@ class solopine_latest_news_widget extends WP_Widget {
 
         <!-- Number of posts -->
         <p>
-            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'solopine' ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( '页面：' ); ?></label>
             <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>"
                    name="<?php echo $this->get_field_name( 'number' ); ?>" value="<?php echo $instance['number']; ?>"
                    size="3"/>

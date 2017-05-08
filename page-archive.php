@@ -3,15 +3,10 @@
 /* Template Name: 文章归档 */
 
 ?>
-
 <?php get_header(); ?>
-
-
     <section id="primary" class="content-area">
         <main class="full-page">
             <div class="full-content">
-
-
                 <div class="archive-review">
                     <div class="archive-year"><h2>review</h2></div>
                     <div class="archive-grid">
@@ -60,7 +55,6 @@
                         <p class="block-postMeta"></p>
                     </div>
                 </div>
-
 				<?php while ( have_posts() ) : the_post(); ?>
 				<?php endwhile; ?>
 				<?php
@@ -81,7 +75,6 @@
                         </li>
                         ';
 				endwhile;
-
 				wp_reset_postdata();
 				$output      = '';
 				$postresults = '';
@@ -106,5 +99,4 @@
             </div>
         </main>
     </section>
-
 <?php get_footer(); ?>

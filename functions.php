@@ -1,7 +1,5 @@
 <?php
 /**
- * Her functions and definitions
- *
  * Set up the theme and provides some helper functions, which are used in the
  * theme as custom template tags. Others are attached to action and filter
  * hooks in WordPress to change core functionality.
@@ -11,17 +9,12 @@
  * functions.php file. The child theme's functions.php file is included before
  * the parent theme's file, so the child theme functions would be used.
  *
- * @link https://www.banxia.me
- *
  * Functions that are not pluggable (not wrapped in function_exists()) are
  * instead attached to a filter or action hook.
  *
  * For more information on hooks, actions, and filters,
  * {@link https://codex.wordpress.org/Plugin_API}
  *
- * @package WordPress
- * @subpackage Her
- * @since Her 2.0
  */
 
 define( 'HER_VERSION', '1.0' );
@@ -324,10 +317,10 @@ function sp_category( $separator ) {
 		foreach ( ( get_the_category() ) as $category ) {
 			if ( $category->cat_ID != $excluded_cat ) {
 				if ( $first_time == 1 ) {
-					echo '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s", "solopine" ), $category->name ) . '" ' . '>' . $category->name . '</a>';
+					echo '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "在 %s 中查看所有文章" ), $category->name ) . '" ' . '>' . $category->name . '</a>';
 					$first_time = 0;
 				} else {
-					echo $separator . '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s", "solopine" ), $category->name ) . '" ' . '>' . $category->name . '</a>';
+					echo $separator . '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "在 %s 中查看所有文章" ), $category->name ) . '" ' . '>' . $category->name . '</a>';
 				}
 			}
 		}
@@ -337,10 +330,10 @@ function sp_category( $separator ) {
 		$first_time = 1;
 		foreach ( ( get_the_category() ) as $category ) {
 			if ( $first_time == 1 ) {
-				echo '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s", "solopine" ), $category->name ) . '" ' . '>' . $category->name . '</a>';
+				echo '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "在 %s 中查看所有文章" ), $category->name ) . '" ' . '>' . $category->name . '</a>';
 				$first_time = 0;
 			} else {
-				echo $separator . '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s", "solopine" ), $category->name ) . '" ' . '>' . $category->name . '</a>';
+				echo $separator . '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "在 %s 中查看所有文章" ), $category->name ) . '" ' . '>' . $category->name . '</a>';
 			}
 		}
 

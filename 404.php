@@ -1,24 +1,9 @@
-<?php
-/**
- * Theme Name: Her
- * Theme URI: https://www.banxia.me
- * Author: Banxia
- * Author URI: https://www.banxia.me
- * Description: Her design and develop by Aaron in 2017.
- * Version: 2.0
- * @package WordPress
- * @subpackage Her
- * @since Her 2.0
- */
-?>
-
 <?php get_header(); ?>
 
 
 <div id="primary" class="content-area">
     <main class="full-page">
         <div class="full-content">
-
             <section class="error-404 not-found">
                 <div class="author-content">
                     <div class="p404"><i class="iconfont icon-404"></i></div>
@@ -27,7 +12,6 @@
 					<?php get_search_form(); ?>
                 </div><!-- .page-header -->
             </section><!-- .error-404 -->
-
         </div>
     </main><!-- .site-main -->
 </div><!-- .content-area -->

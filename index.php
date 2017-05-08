@@ -1,26 +1,7 @@
-<?php
-/**
- * Theme Name: Her
- * Theme URI: https://www.banxia.me
- * Author: Banxia
- * Author URI: https://www.banxia.me
- * Description: Her design and develop by Aaron in 2017.
- * Version: 2.0
- * @package WordPress
- * @subpackage Her
- * @since Her 2.0
- */
-?>
-
 <?php get_header(); ?>
-
-
     <!-- Wrapper -->
     <div id="wrapper">
-
         <!-- Banner -->
-
-
         <section id="content" class="main items">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'inc/content-grid', 'page' ); ?>
@@ -28,8 +9,6 @@
 				<?php solopine_pagination(); ?>
 			<?php endif; ?>
         </section>
-
-
         <!-- CTA -->
 		<?php if ( get_option( 'theme_button_post' ) == 'checked' ) { ?>
             <section id="cta" class="main special">
@@ -51,7 +30,5 @@
                 </div>
             </section>
 		<?php } ?>
-
     </div>
-
 <?php get_footer(); ?>

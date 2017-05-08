@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-
-
     <div id="primary" class="content-area">
         <div class="full-page">
 
@@ -24,7 +22,7 @@
 
 					<?php else : ?>
                         <div class="author-content">
-                            <h3 class="nothing"><?php _e( 'Sorry, no posts were found. Try searching for something else.', 'solopine' ); ?></h3>
+                            <h3 class="nothing"><?php _e( '抱歉，没有符合您搜索条件的结果。请换其它关键词再试。' ); ?></h3>
                         </div>
 					<?php endif; ?>
                 </div>

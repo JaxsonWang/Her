@@ -3,15 +3,10 @@
 /* Template Name: 友情链接 */
 
 ?>
-
 <?php get_header(); ?>
-
-
 <section id="primary" class="content-area">
     <main class="full-page">
         <div class="full-content">
-
-
             <div class="link-content">
                 <h2 style="text-align: center;">友情链接</h2>
 				<?php
@@ -26,8 +21,7 @@
                     </a>
                     <span class="link-sitename">' . $bookmark->link_name . '</span>
                     <a class="link-avator">' . get_avatar( $bookmark->link_notes, 64 ) . ' </a>
-                </li>
-                            ';
+                </li>';
 					}
 					echo '</ul>';
 				}
@@ -44,8 +38,6 @@
 				endwhile;
 				?>
             </div>
-
-
         </div>
     </main>
 </section>

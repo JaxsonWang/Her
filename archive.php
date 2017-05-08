@@ -1,17 +1,3 @@
-<?php
-/**
- * Theme Name: Her
- * Theme URI: https://www.banxia.me
- * Author: Banxia
- * Author URI: https://www.banxia.me
- * Description: Her design and develop by Aaron in 2017.
- * Version: 2.0
- * @package WordPress
- * @subpackage Her
- * @since Her 2.0
- */
-?>
-
 <?php get_header(); ?>
 
 <div id="primary" class="content-area">

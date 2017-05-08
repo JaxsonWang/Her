@@ -1,17 +1,3 @@
-<?php
-/**
- * Theme Name: Her
- * Theme URI: https://www.banxia.me
- * Author: Banxia
- * Author URI: https://www.banxia.me
- * Description: Her design and develop by Aaron in 2017.
- * Version: 2.0
- * @package WordPress
- * @subpackage Her
- * @since Her 2.0
- */
-?>
-
 <?php get_header(); ?>
 
     <header id="header" class="alt" style="background-image:url(
@@ -29,9 +15,9 @@
 	<?php endif; ?>
             );">
         <div class="inner">
-            <h1 class="post-page-title "><?php printf( __( '%s', 'solopine' ), single_cat_title( '', false ) ); ?></h1>
+            <h1 class="post-page-title "><?php printf( __( '%s' ), single_cat_title( '', false ) ); ?></h1>
             <p>最近更新：<?php the_title(); ?>/<?php the_time( get_option( 'date_format' ) ); ?></p>
-            <p><?php _e( 'Browsing Category', 'solopine' ); ?></p>
+            <p><?php _e( '浏览分类' ); ?></p>
         </div>
     </header><!-- .site-header -->
 
