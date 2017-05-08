@@ -79,7 +79,7 @@
                 myField.focus();
             }
             else if (myField.selectionStart || myField.selectionStart === '0') {
-                startPos = myField.selectionStart
+                startPos = myField.selectionStart;
                 endPos = myField.selectionEnd;
                 cursorPos = startPos;
                 myField.value = myField.value.substring(0, startPos)
