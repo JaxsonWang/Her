@@ -22,6 +22,8 @@ function BaseSettings() {
 		update_option( 'theme_button_post_meta', isset( $_POST['theme_button_post_meta'] ) && $_POST['theme_button_post_meta'] ? $_POST['theme_button_post_meta'] : '' ); //textarea
 		update_option( 'theme_blog_description', isset( $_POST['theme_blog_description'] ) && $_POST['theme_blog_description'] ? $_POST['theme_blog_description'] : '' ); //textarea
 		update_option( 'theme_blog_keywords', isset( $_POST['theme_blog_keywords'] ) && $_POST['theme_blog_keywords'] ? $_POST['theme_blog_keywords'] : '' ); //textarea
+		update_option( 'theme_blog_track', isset( $_POST['theme_blog_track'] ) && $_POST['theme_blog_track'] ? $_POST['theme_blog_track'] : '' ); //textarea
+		update_option( 'theme_blog_footer_code', isset( $_POST['theme_blog_footer_code'] ) && $_POST['theme_blog_footer_code'] ? $_POST['theme_blog_footer_code'] : '' ); //textarea
 		if ( isset( $_POST['theme_author_index'] ) && $_POST['theme_author_index'] == 'on' ) {
 			$display = 'checked';
 		} else {

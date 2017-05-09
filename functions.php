@@ -63,10 +63,12 @@ function solopine_load_scripts() {
 	wp_register_style( 'slicknav-css', get_template_directory_uri() . '/css/slicknav.css', array(), HER_VERSION, 'all' );
 	wp_register_style( 'responsive', get_template_directory_uri() . '/css/responsive.css', array(), HER_VERSION, 'all' );
 	wp_register_style( 'alifonts', '//at.alicdn.com/t/font_3nut7ugnvto11yvi.css', array(), HER_VERSION, 'all' );
+    wp_register_style( 'highlightcss', 'https://cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css', array(),HER_VERSION, 'all' );
 
 	wp_register_script( 'jquery_js', get_template_directory_uri() . '/js/jquery.min.js', array(), HER_VERSION, true );
 	wp_register_script( 'slicknav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array(), HER_VERSION, true );
 	wp_register_script( 'functions', get_template_directory_uri() . '/js/functions.js', array(), HER_VERSION, true );
+    wp_register_script( 'highlightjs', 'https://cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js',array(), HER_VERSION, true);
 
 	// Enqueue scripts and styles
 	wp_enqueue_style( 'sp_style' );
@@ -74,11 +76,13 @@ function solopine_load_scripts() {
 	wp_enqueue_style( 'slicknav-css' );
 	wp_enqueue_style( 'alifonts' );
 	wp_enqueue_style( 'responsive' );
+	wp_enqueue_style( 'highlightcss' );
 
 	// JS
 	wp_enqueue_script( 'jquery_js' );
 	wp_enqueue_script( 'slicknav' );
 	wp_enqueue_script( 'functions' );
+	wp_enqueue_script( 'highlightjs' );
 
 
 	if ( is_singular() && get_option( 'thread_comments' ) ) {
@@ -363,6 +367,30 @@ if ( ! function_exists( 'get_mypost_thumbnail' ) ) {
 		return $url;
 	}
 }
+
+// 文章内链 by bigfa
+function fa_insert_posts( $atts, $content = null ){
+	extract( shortcode_atts( array(
+
+		'ids' => ''
+
+	),
+		$atts ) );
+	global $post;
+	$content = '';
+	$postids =  explode(',', $ids);
+	$inset_posts = get_posts(array('post__in'=>$postids));
+	foreach ($inset_posts as $key => $post) {
+		setup_postdata( $post );
+		$content .=  '
+
+<div class="aaroninpostsbox"><div class="aaroninpostsimg"><a href="' . get_permalink() . '" target="_blank" class="mixipImage" >' . get_the_post_thumbnail() . '</a></div><a href="' . get_permalink() . '" target="_blank"><span class="aaroninpostsbox-strong">' . get_the_title() . '</span></a><em class="aaronipem">' . get_the_excerpt() . '...</em><div class="aaronipmeta"><br />发表于 ' . get_the_date() . ' - ' . get_comments_number(). ' 条评论.</div></div>
+';
+	}
+	wp_reset_postdata();
+	return $content;
+}
+add_shortcode('in_post', 'fa_insert_posts');
 
 /**
  * WordPress评论回复邮件提醒防垃圾评论版
@@ -702,3 +730,26 @@ function wpjam_custom_upload_dir($uploads)
 	}
 	return $uploads;
 }
+
+//语法高亮
+function theme_highlight() {
+	echo '<script type="text/javascript" defer="defer">
+              window.onload = function() {
+                  hljs.initHighlightingOnLoad();
+                  jQuery(document).ready(function ($) {
+                    $("pre code").each(function (i, block) {
+                        hljs.highlightBlock(block);
+                    });
+                });
+              }
+          </script>';
+}
+add_action("wp_footer","theme_highlight");
+
+//网站统计
+function theme_track () {
+	if ( get_option('theme_blog_track') != '' ) {
+		echo get_option('theme_blog_track');
+	}
+}
+add_action("wp_footer","theme_track");

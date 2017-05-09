@@ -65,6 +65,22 @@
                     </tr>
 
                     <tr valign="top">
+                        <th scope="row"><label for="theme_blog_track">网站统计</label></th>
+                        <td>
+                            <textarea name="theme_blog_track" id="theme_blog_track" class="large-text" rows="5"
+                                      cols="30"><?php echo get_option( 'theme_blog_track' ); ?></textarea>
+                        </td>
+                    </tr>
+
+                    <tr valign="top">
+                        <th scope="row"><label for="theme_blog_footer_code">自定义页脚信息</label></th>
+                        <td>
+                            <textarea name="theme_blog_footer_code" id="theme_blog_footer_code" class="large-text" rows="5"
+                                      cols="30"><?php echo get_option( 'theme_blog_footer_code' ); ?></textarea>
+                        </td>
+                    </tr>
+
+                    <tr valign="top">
                         <th scope="row"><label for="theme_author_post">内页作者模块</label></th>
                         <td>
                             <input type="checkbox" name="theme_author_post"
