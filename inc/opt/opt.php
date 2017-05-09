@@ -18,6 +18,7 @@ function BaseSettings() {
 		update_option( 'theme_button_post_down', $_POST['theme_button_post_down'] ? $_POST['theme_button_post_down'] : '' ); //input
 		update_option( 'theme_button_post_url', isset( $_POST['theme_button_post_url'] ) && $_POST['theme_button_post_url'] ? $_POST['theme_button_post_url'] : '' ); //input
 		update_option( 'theme_button_post_title', isset( $_POST['theme_button_post_title'] ) && $_POST['theme_button_post_title'] ? $_POST['theme_button_post_title'] : '' ); //input
+		update_option( 'theme_qiniucdn', isset( $_POST['theme_qiniucdn'] ) && $_POST['theme_qiniucdn'] ? $_POST['theme_qiniucdn'] : '' ); //input
 		update_option( 'theme_button_post_meta', isset( $_POST['theme_button_post_meta'] ) && $_POST['theme_button_post_meta'] ? $_POST['theme_button_post_meta'] : '' ); //textarea
 		update_option( 'theme_blog_description', isset( $_POST['theme_blog_description'] ) && $_POST['theme_blog_description'] ? $_POST['theme_blog_description'] : '' ); //textarea
 		update_option( 'theme_blog_keywords', isset( $_POST['theme_blog_keywords'] ) && $_POST['theme_blog_keywords'] ? $_POST['theme_blog_keywords'] : '' ); //textarea
@@ -39,7 +40,14 @@ function BaseSettings() {
 			$display = '';
 		}
 		update_option( 'theme_alsolike_post', $display ); //alsolike-post
-		update_option( 'def_banner', $_POST['def_banner'] ); //Upload
+		if ( isset( $_POST['theme_static_qiniucdn'] ) && $_POST['theme_static_qiniucdn'] == 'on' ) {
+			$display = 'checked';
+		} else {
+			$display = '';
+		}
+		update_option( 'theme_static_qiniucdn', $display ); //七牛CDN静态资源云缓存
+		update_option( 'def_banner', isset($_POST['def_banner']) && $_POST['def_banner'] ? $_POST['def_banner'] : '' ); //Upload
+		update_option( 'theme_logo', isset($_POST['theme_logo']) && $_POST['theme_logo'] ? $_POST['theme_logo'] : '' ); //Upload
 		echo SuccessInfo;
 
 		// 社交媒体

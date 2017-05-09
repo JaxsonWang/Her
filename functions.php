@@ -433,8 +433,13 @@ function fa_get_post_readtime() {
 
 // 取当前主题下smilies\下表情图片路径
 function custom_smilie9s_src( $old, $img ) {
-//	return '//res.i95.me/her/images/smilies/' . $img;
-	return get_stylesheet_directory_uri() . '/img/smilies/' . $img;
+    //CDN判断
+	if (get_option( 'theme_static_qiniucdn' ) == 'checked' ) {
+		$get_smiley_url = get_option( 'theme_qiniucdn' ) . '/her';
+	} else {
+		$get_smiley_url = get_template_directory_uri();
+	}
+	return $get_smiley_url . '/img/smilies/' . $img;
 }
 
 function init_smilie9s() {
@@ -590,7 +595,7 @@ function comment_add_at_parent( $comment_text ) {
 // 后台登录头像
 function custom_login_logo() {
 	echo '<style type="text/css">
-		h1 a { background-image:url(' . esc_html( get_option( 'her_logo' ) ) . ') !important;}
+		h1 a { background-image:url(' . esc_html( get_option( 'theme_logo' ) ) . ') !important;}
 		</style>';
 }
 
@@ -673,3 +678,27 @@ function her_comment_floor_css() {
 }
 
 add_action( 'wp_head', 'her_comment_floor_css', 10 );
+
+//图片七牛云缓存
+add_filter('upload_dir', 'wpjam_custom_upload_dir');
+function wpjam_custom_upload_dir($uploads)
+{
+	$upload_path = '';
+	$upload_url_path = get_option('theme_qiniucdn');
+
+	if (empty($upload_path) || 'wp-content/uploads' == $upload_path) {
+		$uploads['basedir'] = WP_CONTENT_DIR . '/uploads';
+	} elseif (0 !== strpos($upload_path, ABSPATH)) {
+		$uploads['basedir'] = path_join(ABSPATH, $upload_path);
+	} else {
+		$uploads['basedir'] = $upload_path;
+	}
+
+	$uploads['path'] = $uploads['basedir'] . $uploads['subdir'];
+
+	if ($upload_url_path) {
+		$uploads['baseurl'] = $upload_url_path;
+		$uploads['url'] = $uploads['baseurl'] . $uploads['subdir'];
+	}
+	return $uploads;
+}

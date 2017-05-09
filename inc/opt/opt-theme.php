@@ -31,6 +31,15 @@
                     </tr>
 
                     <tr valign="top">
+                        <th scope="row">网站logo</th>
+                        <td>
+                            <input type="text" name="theme_logo" value="<?php echo get_option( 'theme_logo' ); ?>"
+                                   title="upload"/>
+                            <a id="theme_logo" class="cp_upload_button button" href="#">上传</a>
+                        </td>
+                    </tr>
+
+                    <tr valign="top">
                         <th scope="row">无特色图像时默认图片</th>
                         <td>
                             <input type="text" name="def_banner" value="<?php echo get_option( 'def_banner' ); ?>"
@@ -38,6 +47,23 @@
                             <a id="def_banner" class="cp_upload_button button" href="#">上传</a>
                         </td>
                     </tr>
+
+                    <tr valign="top">
+                        <th scope="row"><label for="theme_qiniucdn">七牛CDN</label></th>
+                        <td>
+                            <input type="text" name="theme_qiniucdn" id="theme_qiniucdn"
+                                   class="regular-text" value="<?php echo get_option( 'theme_qiniucdn' ); ?>"/>
+                        </td>
+                    </tr>
+
+                    <tr valign="top">
+                        <th scope="row"><label for="theme_static_qiniucdn">本地静态资源部署七牛云缓存</label></th>
+                        <td>
+                            <input type="checkbox" name="theme_static_qiniucdn"
+                                   id="theme_static_qiniucdn" <?php echo get_option( 'theme_static_qiniucdn' ); ?> />
+                        </td>
+                    </tr>
+
                     <tr valign="top">
                         <th scope="row"><label for="theme_author_post">内页作者模块</label></th>
                         <td>

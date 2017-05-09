@@ -754,7 +754,7 @@ table.alt tbody tr td {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.25) url("../img/overlay.png");
+    background: rgba(0, 0, 0, 0.25);
     opacity: 0.2;
 }
 
@@ -965,7 +965,7 @@ table.alt tbody tr td {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.25) url("../img/overlay.png");
+    background: rgba(0, 0, 0, 0.25);
     opacity: 0.2;
 }
 
@@ -2188,7 +2188,6 @@ body ::-moz-selection {
     opacity: .9;
     -webkit-transition: all .5s;
     transition: all .5s;
-    background-image: url("../img/overlay.png");
 }
 
 .link-avator {

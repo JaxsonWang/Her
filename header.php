@@ -55,8 +55,6 @@
 			echo ' - ' . sprintf( __( '第 %s 页' ), max( $paged, $page ) );
 		} ?>
     </title>
-
-
     <link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -67,6 +65,17 @@
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
 	<?php endif; ?>
 	<?php wp_head(); ?>
+    <style type="text/css" rel="stylesheet" media="all">
+        .item header a:before, #header:before, .link-img {
+            background-image: url("<?php
+                if ( get_option( 'theme_static_qiniucdn' ) == 'checked' ) {
+                    echo get_option( 'theme_qiniucdn' ) . '/her/img/overlay.png';
+                } else {
+                    echo get_template_directory_uri() . '/img/overlay.png';
+                }
+             ?> ");
+        }
+    </style>
 </head>
 
 <body <?php body_class(); ?>>
