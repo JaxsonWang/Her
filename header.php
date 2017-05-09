@@ -66,7 +66,7 @@
 	<?php endif; ?>
 	<?php wp_head(); ?>
     <style type="text/css" rel="stylesheet" media="all">
-        .item header a:before, #header:before, .link-img {
+        .item header a:before, #header:before {
             background-image: url("<?php
                 if ( get_option( 'theme_static_qiniucdn' ) == 'checked' ) {
                     echo get_option( 'theme_qiniucdn' ) . '/her/img/overlay.png';

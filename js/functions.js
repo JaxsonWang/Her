@@ -31,4 +31,9 @@ jQuery(document).ready(function ($) {
         return false
     });
 
+    //语法高亮
+    hljs.initHighlightingOnLoad();
+    $("pre code").each(function (i, block) {
+        hljs.highlightBlock(block);
+    });
 });
