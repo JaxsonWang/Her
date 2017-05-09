@@ -7,8 +7,18 @@
 <section id="primary" class="content-area">
     <main class="full-page">
         <div class="full-content">
+            <h2 style="text-align: center;">友情链接</h2>
+            <div>
+		        <?php
+		        // Start the loop.
+		        while ( have_posts() ) : the_post();
+			        // Include the page content template.
+			        get_template_part( 'inc/content-single', 'page' );
+			        // End of the loop.
+		        endwhile;
+		        ?>
+            </div>
             <div class="link-content">
-                <h2 style="text-align: center;">友情链接</h2>
 				<?php
 				$bookmarks = get_bookmarks( 'category_name=' );
 				if ( ! empty( $bookmarks ) ) {
@@ -27,17 +37,6 @@
 					}
 					echo '</ul>';
 				}
-				?>
-            </div>
-
-            <div>
-				<?php
-				// Start the loop.
-				while ( have_posts() ) : the_post();
-					// Include the page content template.
-					get_template_part( 'inc/content-single', 'page' );
-					// End of the loop.
-				endwhile;
 				?>
             </div>
         </div>
