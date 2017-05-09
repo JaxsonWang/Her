@@ -18,7 +18,6 @@
         </a>
         <h3><?php the_title(); ?></h3>
     </header>
-    <p><?php echo sp_string_limit_words( get_the_excerpt(), 20 ); ?>&hellip;</p>
 
     <p class="block-postMeta">
 		<?php echo mutheme_time_since( strtotime( $post->post_date_gmt ) ); ?>
