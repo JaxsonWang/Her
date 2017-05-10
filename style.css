@@ -21,7 +21,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: "Trebuchet MS", Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'STHeiti Light', 'Microsoft YaHei', SimHei, 'WenQuanYi Micro Hei', sans-serif;
+    font-family: -apple-system-font,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     vertical-align: baseline;
 }
 
@@ -103,7 +103,6 @@ body {
 }
 
 body, input, select, textarea {
-    font-family: "klkregular", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", "Helvetica", "Arial", "sans-serif";
     font-size: 12pt;
     font-weight: 200;
     line-height: 1.5;
@@ -171,11 +170,11 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 h3 {
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 
 h4 {
@@ -188,22 +187,6 @@ h5 {
 
 h6 {
     font-size: 1em;
-}
-
-@media screen and (max-width: 736px) {
-
-    h1 {
-        font-size: 1.2em;
-    }
-
-    h2 {
-        font-size: 1em;
-    }
-
-    h3 {
-        font-size: 0.8em;
-    }
-
 }
 
 sub {
@@ -1012,7 +995,6 @@ table.alt tbody tr td {
     font-size: 3em;
     padding: 0 0.5em 0 0.5em;
     font-weight: 200;
-    font-family: "klkregular", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", "Helvetica", "Arial", "sans-serif";
     letter-spacing: 0;
 }
 
