@@ -78,7 +78,7 @@
     </style>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> itemscope="itemscope" itemtype="https://schema.org/WPPage">
 <div id="top-bar">
     <div class="container">
         <div id="nav-wrapper">

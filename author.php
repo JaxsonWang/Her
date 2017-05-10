@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <header id="header" class="alt" style="background-image:url(
+    <header id="header" class="alt" itemscope="itemscope" itemtype="https://schema.org/WPHeader" style="background-image:url(
 	<?php if ( has_post_thumbnail() ) : ?>
 		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' );
 		echo $image[0]; ?>
