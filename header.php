@@ -86,7 +86,6 @@
 			) ); ?>
         </div>
         <div class="menu-mobile"></div>
-		<?php if ( ! get_theme_mod( 'sp_topbar_search_check' ) ) : ?>
 
             <div id="top-search">
 				<?php get_search_form(); ?>
@@ -99,10 +98,7 @@
 				<?php get_search_form(); ?>
             </div>
             <!-- -->
-		<?php endif; ?>
 
-		<?php if ( ! get_theme_mod( 'sp_topbar_social_check' ) ) : ?>
-		<?php endif; ?>
     </div>
 
 </div>
