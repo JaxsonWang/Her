@@ -10,7 +10,7 @@
 <section id="primary" class="content-area">
     <main class="full-page">
 	    <?php
-	    echo get_option('theme_blog_track');
+	    echo get_theme_mod( 'sp_topbar_search_check' );
 	    ?>
     </main>
 

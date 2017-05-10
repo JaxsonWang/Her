@@ -1,9 +1,9 @@
 <?php
 /**
  * Theme Name: Her
- * Theme URI: https://www.banxia.me
- * Author: Banxia
- * Author URI: https://www.banxia.me
+ * Theme URI: https://iiong.com
+ * Author: 淮城一只猫
+ * Author URI: https://iiong.com
  * Description: Her design and develop by Aaron in 2017.
  * Version: 2.0
  * @package WordPress
