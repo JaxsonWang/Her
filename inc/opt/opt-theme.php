@@ -73,6 +73,13 @@
                     </tr>
 
                     <tr valign="top">
+                        <th scope="row"><label for="theme_icp_num">ICP备案号</label></th>
+                        <td>
+                            <input type="text" name="theme_icp_num" id="theme_icp_num" class="regular-text" value="<?php echo get_option( 'theme_icp_num' ); ?>"/>
+                        </td>
+                    </tr>
+
+                    <tr valign="top">
                         <th scope="row"><label for="theme_blog_footer_code">自定义页脚信息</label></th>
                         <td>
                             <textarea name="theme_blog_footer_code" id="theme_blog_footer_code" class="large-text" rows="5"
