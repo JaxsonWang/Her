@@ -78,7 +78,7 @@
     </style>
 </head>
 
-<body <?php body_class(); ?> itemscope="itemscope" itemtype="https://schema.org/WPPage">
+<body <?php body_class(); ?>>
 <div id="top-bar">
     <div class="container">
         <div id="nav-wrapper">
@@ -86,6 +86,7 @@
 			) ); ?>
         </div>
         <div class="menu-mobile"></div>
+		<?php if ( ! get_theme_mod( 'sp_topbar_search_check' ) ) : ?>
 
             <div id="top-search">
 				<?php get_search_form(); ?>
@@ -98,14 +99,17 @@
 				<?php get_search_form(); ?>
             </div>
             <!-- -->
+		<?php endif; ?>
 
+		<?php if ( ! get_theme_mod( 'sp_topbar_social_check' ) ) : ?>
+		<?php endif; ?>
     </div>
 
 </div>
 
 
 <?php if ( is_singular() ) { ?>
-    <header id="header" class="alt" style="background-image:url(
+    <header id="header" class="alt" itemscope="itemscope" itemtype="https://schema.org/WPHeader" style="background-image:url(
 	<?php if ( has_post_thumbnail() ) : ?>
 		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' );
 		echo $image[0]; ?>
