@@ -41,7 +41,7 @@ if ( $my_query->have_posts() ) { ?>
 						if ( get_option( 'def_banner' ) == '' ) {
 							echo '';
 						} else {
-							echo '<img src="' . _e( get_option( "def_banner" ) ) . '" alt="' . the_title() . '" />';
+							echo '<img src="' . esc_url( get_option( "def_banner" ) ) . '" alt="" />';
 						}
 						?>
 					<?php endif; ?>
