@@ -1,5 +1,5 @@
-<div style="margin:50px auto;background-color: #fff;max-width: 800px;border-bottom:3px solid #f2e929;">
-    <div style="border:2px solid #f2e929;  padding:10px 30px 0 30px;">
+<div style="margin:50px auto;background-color: #fff;max-width: 800px;border-bottom:3px solid #C69F73;">
+    <div style="border:2px solid #C69F73;  padding:10px 30px 0 30px;">
         <div style="margin-top: 20px; border-top: solid 1px #f2f2f2; padding-top: 10px; font-size: 14px; line-height: 18px; color: #999; ">
             <p>你好，这个主题的用户：</p>
             <p>很高兴你喜欢这款主题，让我来介绍一下主题的基本设置吧！</p>

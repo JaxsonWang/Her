@@ -1,8 +1,4 @@
-<?php /**主题设置项更新页面**/
-
-/**主题设置项更新页面**/
-
-//成功提示
+<?php
 define( 'SuccessInfo', '<div class="updated"><p><strong>设置已保存。</strong></p></div>' );
 
 //主题设置
@@ -19,11 +15,11 @@ function BaseSettings() {
 		update_option( 'theme_button_post_url', isset( $_POST['theme_button_post_url'] ) && $_POST['theme_button_post_url'] ? $_POST['theme_button_post_url'] : '' ); //input
 		update_option( 'theme_button_post_title', isset( $_POST['theme_button_post_title'] ) && $_POST['theme_button_post_title'] ? $_POST['theme_button_post_title'] : '' ); //input
 		update_option( 'theme_qiniucdn', isset( $_POST['theme_qiniucdn'] ) && $_POST['theme_qiniucdn'] ? $_POST['theme_qiniucdn'] : '' ); //input
-		update_option( 'theme_button_post_meta', isset( $_POST['theme_button_post_meta'] ) && $_POST['theme_button_post_meta'] ? $_POST['theme_button_post_meta'] : '' ); //textarea
-		update_option( 'theme_blog_description', isset( $_POST['theme_blog_description'] ) && $_POST['theme_blog_description'] ? $_POST['theme_blog_description'] : '' ); //textarea
-		update_option( 'theme_blog_keywords', isset( $_POST['theme_blog_keywords'] ) && $_POST['theme_blog_keywords'] ? $_POST['theme_blog_keywords'] : '' ); //textarea
-		update_option( 'theme_blog_track', isset( $_POST['theme_blog_track'] ) && $_POST['theme_blog_track'] ? $_POST['theme_blog_track'] : '' ); //textarea
-		update_option( 'theme_blog_footer_code', isset( $_POST['theme_blog_footer_code'] ) && $_POST['theme_blog_footer_code'] ? $_POST['theme_blog_footer_code'] : '' ); //textarea
+		update_option( 'theme_button_post_meta', isset( $_POST['theme_button_post_meta'] ) && $_POST['theme_button_post_meta'] ? stripslashes($_POST['theme_button_post_meta']) : '' ); //textarea
+		update_option( 'theme_blog_description', isset( $_POST['theme_blog_description'] ) && $_POST['theme_blog_description'] ? stripslashes($_POST['theme_blog_description']) : '' ); //textarea
+		update_option( 'theme_blog_keywords', isset( $_POST['theme_blog_keywords'] ) && $_POST['theme_blog_keywords'] ? stripslashes($_POST['theme_blog_keywords']) : '' ); //textarea
+		update_option( 'theme_blog_track', isset( $_POST['theme_blog_track'] ) && $_POST['theme_blog_track'] ? stripslashes($_POST['theme_blog_track']) : '' ); //textarea
+		update_option( 'theme_blog_footer_code', isset( $_POST['theme_blog_footer_code'] ) && $_POST['theme_blog_footer_code'] ? stripslashes($_POST['theme_blog_footer_code']) : '' ); //textarea
 		if ( isset( $_POST['theme_author_index'] ) && $_POST['theme_author_index'] == 'on' ) {
 			$display = 'checked';
 		} else {
@@ -70,8 +66,6 @@ function BaseSettings() {
 		update_option( 'sp_vimeo', isset( $_POST['sp_vimeo'] ) && $_POST['sp_vimeo'] ? $_POST['sp_vimeo'] : '' ); //input
 		update_option( 'sp_linkedin', isset( $_POST['sp_linkedin'] ) && $_POST['sp_linkedin'] ? $_POST['sp_linkedin'] : $_POST['sp_linkedin'] ); //input
 		update_option( 'sp_rss', isset( $_POST['sp_rss'] ) && $_POST['sp_rss'] ? $_POST['sp_rss'] : '' ); //input
-
-
 	}
 	require_once( get_template_directory() . '/inc/opt/opt-theme.php' ); //代码解耦
 	add_action( 'admin_menu', 'BaseSettings' );
