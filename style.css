@@ -14,7 +14,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 /* Reset */
 /**
- * main color :#C69F73
+ * main color :#c69f73
  */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -548,7 +548,7 @@ table.alt tbody tr td {
 }
 
 .item header a:hover {
-    color: #C69F73;
+    color: #c69f73;
 }
 
 .item header strong, .item header b {
@@ -861,7 +861,7 @@ body.mobile-sidebar-open {
     border-radius: 50%;
 }
 
-.mobile-sidebar #searchform,.mobile-sidebar #searchform input {
+.mobile-sidebar #searchform, .mobile-sidebar #searchform input {
     text-align: center;
 }
 
@@ -962,7 +962,7 @@ body.mobile-sidebar-open {
 }
 
 #header a:hover {
-    color: #C69F73;
+    color: #c69f73;
 }
 
 #header strong, #header b {
@@ -1220,6 +1220,24 @@ body.mobile-sidebar-open {
 
 }
 
+/*分享协议*/
+.creative-commons {
+    font-size: 15px;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.creative-commons a {
+    color: #c69f73
+}
+
+.creative-commons p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align: center
+}
+
 .special {
     max-width: 640px;
     margin: 0 auto;
@@ -1306,7 +1324,7 @@ body.mobile-sidebar-open {
 }
 
 #nav-wrapper .menu li.current-menu-item > a, #nav-wrapper .menu li.current_page_item > a, #nav-wrapper .menu li a:hover {
-    color: #C69F73;
+    color: #c69f73;
     text-shadow: none;
 }
 
@@ -1351,7 +1369,7 @@ body.mobile-sidebar-open {
 
 #nav-wrapper ul.menu ul a:hover,
 #nav-wrapper .menu ul ul a:hover {
-    color: #C69F73;
+    color: #c69f73;
     background: #eee;
 }
 
@@ -1365,6 +1383,7 @@ body.mobile-sidebar-open {
     left: 100%;
     top: 0;
 }
+
 /*** Post ***/
 
 .post-entry img {
@@ -1402,7 +1421,7 @@ body.mobile-sidebar-open {
 
 .post-entry blockquote {
     border-left: 3px solid;
-    border-color: #C69F73;
+    border-color: #c69f73;
     padding: 0 14px;
 }
 
@@ -1465,7 +1484,7 @@ body.mobile-sidebar-open {
 }
 
 .post a:hover {
-    color: #C69F73;
+    color: #c69f73;
     text-decoration: none;
     text-shadow: none;
 }
@@ -1542,8 +1561,8 @@ body.mobile-sidebar-open {
 }
 
 .post-tags a:hover {
-    color: #FFFFFF !important;
-    background-color: #C69F73;
+    color: #fff;
+    background-color: #c69f73;
     border-radius: 5px;
     text-decoration: none;
     text-shadow: none;
@@ -1556,8 +1575,8 @@ body.mobile-sidebar-open {
 }
 
 .pauthor {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto;
 }
 
@@ -1566,7 +1585,7 @@ body.mobile-sidebar-open {
     display: block;
     width: 100%;
     height: 100%;
-    border-radius: 100%;
+    border-radius: 50%;
     background-position: center center;
     background-size: cover;
 }
@@ -1591,7 +1610,7 @@ body.mobile-sidebar-open {
 }
 
 .author-content a i:hover {
-    color: #C69F73;
+    color: #c69f73;
 }
 
 /*** Comments ***/
@@ -1870,13 +1889,13 @@ img.wp-smiley {
 
 body ::selection {
     color: #FFFFFF;
-    background-color: #C69F73;
+    background-color: #c69f73;
     text-shadow: none;
 }
 
 body ::-moz-selection {
     color: #FFFFFF;
-    background-color: #C69F73;
+    background-color: #c69f73;
     text-shadow: none;
 }
 

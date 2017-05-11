@@ -1,7 +1,7 @@
 <div class="post-author">
 
     <div class="pauthor">
-		<?php echo get_avatar( get_the_author_meta( 'email' ), '100' ); ?>
+		<?php echo get_avatar( get_the_author_meta( 'email' ), '150' ); ?>
     </div>
 
     <div class="author-content">
