@@ -714,6 +714,7 @@ table.alt tbody tr td {
     position: relative;
     padding: 25px 0;
     cursor: pointer;
+    display: none;
 }
 
 .sidebar-toggle span, .sidebar-toggle span:after, .sidebar-toggle span:before {
@@ -867,7 +868,10 @@ body.mobile-sidebar-open {
 
 .mobile-sidebar #searchform input {
     border: 1px solid #eee;
-    border-radius: 5px;
+    border-radius: 50px;
+    height: 30px;
+    width: 100%;
+    font-size: 18px;
 }
 
 .mobile-sidebar #searchform input:focus {
@@ -1303,10 +1307,6 @@ body.mobile-sidebar-open {
 /*** Menu ***/
 #nav-wrapper {
     float: left;
-}
-
-.slicknav_menu {
-    display: none;
 }
 
 #nav-wrapper .menu li {
@@ -2240,7 +2240,7 @@ body ::-moz-selection {
         display: none;
     }
 
-    .slicknav_menu {
+    .sidebar-toggle {
         display: block;
     }
 
@@ -2304,10 +2304,6 @@ body ::-moz-selection {
         display: none;
     }
 
-    .slicknav_menu {
-        display: block;
-    }
-
     /* List layout */
     .list-item .post-img img {
         max-width: 90px;
@@ -2352,6 +2348,10 @@ body ::-moz-selection {
 
     .bx-wrapper .bx-next {
         right: 10px;
+    }
+
+    .sidebar-toggle {
+        display: block;
     }
 
     @media only screen and (min-width: 480px) and (max-width: 768px) {
