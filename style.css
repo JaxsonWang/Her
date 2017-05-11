@@ -31,6 +31,8 @@ article, aside, figcaption, figure, footer, header, menu, nav, section {
 
 body {
     line-height: 1;
+    -ms-overflow-style: scrollbar;
+    -webkit-text-size-adjust: none;
 }
 
 ol, ul, li {
@@ -50,10 +52,6 @@ table {
     border-spacing: 0;
 }
 
-body {
-    -webkit-text-size-adjust: none;
-}
-
 /* Box Model */
 
 *, *:before, *:after {
@@ -66,11 +64,6 @@ body {
     transition: all 300ms 0ms;
 }
 
-/* Basic */
-body {
-    -ms-overflow-style: scrollbar;
-}
-
 @media screen and (max-width: 480px) {
 
     html, body {
@@ -79,14 +72,10 @@ body {
 
 }
 
-body {
-    background: #f4f4f4;
-}
-
 /* Type */
 
 body {
-    background-color: #f4f4f4;
+    background: #f4f4f4;
     color: #666;
 }
 
@@ -768,7 +757,6 @@ div.active.sidebar-toggle span:after {
     overflow: hidden;
     position: relative;
     z-index: 2;
-    background: #fff
 }
 
 .mobile-sidebar {
@@ -877,7 +865,7 @@ body.mobile-sidebar-open {
 .mobile-sidebar #searchform input:focus {
     outline: none;
     border: 1px solid #eee;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 @media (max-width: 767px) {
@@ -1209,7 +1197,7 @@ body.mobile-sidebar-open {
 }
 
 #footer .copyright {
-    font-size: 0.5em;
+    font-size: 12px;
 }
 
 @media screen and (max-width: 736px) {
@@ -1316,7 +1304,7 @@ body.mobile-sidebar-open {
 }
 
 #nav-wrapper .menu li a {
-    font-size: 10px;
+    font-size: 15px;
     letter-spacing: 1px;
     line-height: 51px;
     color: #000;
