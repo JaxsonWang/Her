@@ -506,7 +506,7 @@ table.alt tbody tr td {
 
 .item {
     padding: 3em 3em 1em 3em;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 4px;
     text-align: center;
 }
@@ -540,7 +540,7 @@ table.alt tbody tr td {
 }
 
 .item header input, .item header select, .item header textarea {
-    color: #ffffff;
+    color: #fff;
 }
 
 .item header a {
@@ -552,24 +552,24 @@ table.alt tbody tr td {
 }
 
 .item header strong, .item header b {
-    color: #ffffff;
+    color: #fff;
 }
 
 .item header h1, .item header h2, .item header h3, .item header h4, .item header h5, .item header h6 {
-    color: #ffffff;
+    color: #fff;
 }
 
 .item header blockquote {
-    border-left-color: #ffffff;
+    border-left-color: #fff;
 }
 
 .item header code {
     background: rgba(255, 255, 255, 0.075);
-    border-color: #ffffff;
+    border-color: #fff;
 }
 
 .item header hr {
-    border-bottom-color: #ffffff;
+    border-bottom-color: #fff;
 }
 
 .item header a {
@@ -954,7 +954,7 @@ body.mobile-sidebar-open {
 }
 
 #header input, #header select, #header textarea {
-    color: #ffffff;
+    color: #fff;
 }
 
 #header a {
@@ -966,24 +966,24 @@ body.mobile-sidebar-open {
 }
 
 #header strong, #header b {
-    color: #ffffff;
+    color: #fff;
 }
 
 #header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-    color: #ffffff;
+    color: #fff;
 }
 
 #header blockquote {
-    border-left-color: #ffffff;
+    border-left-color: #fff;
 }
 
 #header code {
     background: rgba(255, 255, 255, 0.075);
-    border-color: #ffffff;
+    border-color: #fff;
 }
 
 #header hr {
-    border-bottom-color: #ffffff;
+    border-bottom-color: #fff;
 }
 
 #header:before {
@@ -1078,7 +1078,7 @@ body.mobile-sidebar-open {
 /* Main */
 #main {
     padding: 4em 4em 2em 4em;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 4px;
 }
 
@@ -1104,7 +1104,7 @@ body.mobile-sidebar-open {
 
 .full-page {
     padding: 4em 1em 2em 1em;
-    background-color: #ffffff !important;
+    background-color: #fff !important;
     border-radius: 4px;
 }
 
@@ -1117,7 +1117,7 @@ body.mobile-sidebar-open {
 
 #intro {
     padding: 2em 4em 2em 4em;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 4px;
     text-align: center;
 }
@@ -1888,13 +1888,13 @@ img.wp-smiley {
 /********************/
 
 body ::selection {
-    color: #FFFFFF;
+    color: #fff;
     background-color: #c69f73;
     text-shadow: none;
 }
 
 body ::-moz-selection {
-    color: #FFFFFF;
+    color: #fff;
     background-color: #c69f73;
     text-shadow: none;
 }
