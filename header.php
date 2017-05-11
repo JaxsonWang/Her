@@ -80,45 +80,51 @@
 
 <body <?php body_class(); ?> itemscope="itemscope" itemtype="https://schema.org/WPPage">
 <div class="site">
-<div id="top-bar">
-    <div class="container">
-        <div id="nav-wrapper">
-			<?php wp_nav_menu( array( 'container'  => false, 'theme_location' => 'main-menu', 'menu_class' => 'menu'
-			) ); ?>
+    <div id="top-bar">
+        <div class="container">
+            <div id="nav-wrapper">
+				<?php wp_nav_menu(
+					array(
+						'container'      => false,
+						'theme_location' => 'main-menu',
+						'menu_class'     => 'menu'
+					)
+				); ?>
+            </div>
+
+            <div id="sidebar-toggle" class="sidebar-toggle">
+                <span></span>
+            </div>
         </div>
 
-        <div id="sidebar-toggle" class="sidebar-toggle">
-            <span></span>
-        </div>
     </div>
 
-</div>
+
+	<?php if ( is_singular() ) { ?>
+        <header id="header" class="alt" itemscope="itemscope" itemtype="https://schema.org/WPHeader"
+                style="background-image:url(
+		        <?php if ( has_post_thumbnail() ) : ?>
+			        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' );
+			        echo $image[0]; ?>
+		        <?php else : ?>
+			        <?php
+			        if ( get_option( 'def_banner' ) == '' ) {
+				        echo get_template_directory_uri() . '/img/banner.jpg';
+			        } else if ( get_option( 'theme_static_qiniucdn' ) == 'checked' ) {
+				        echo get_option( 'theme_qiniucdn' ) . '/her/img/banner.jpg';
+			        } else {
+				        echo get_option( "def_banner" );
+			        }
+			        ?>
+		        <?php endif; ?>
+                        );">
+            <div class="inner">
+                <h1 class="post-page-title "><?php the_title(); ?></h1>
+                <p><?php the_time( get_option( 'date_format' ) ); ?> · <?php echo fa_get_post_readtime(); ?>分钟</p>
+            </div>
+        </header><!-- .site-header -->
+	<?php } ?>
 
 
-<?php if ( is_singular() ) { ?>
-    <header id="header" class="alt" itemscope="itemscope" itemtype="https://schema.org/WPHeader" style="background-image:url(
-	<?php if ( has_post_thumbnail() ) : ?>
-		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-thumb' );
-		echo $image[0]; ?>
-	<?php else : ?>
-		<?php
-		if ( get_option( 'def_banner' ) == '' ) {
-			echo get_template_directory_uri() . '/img/banner.jpg';
-		} else if (get_option( 'theme_static_qiniucdn' ) == 'checked') {
-			echo get_option( 'theme_qiniucdn' ) . '/her/img/banner.jpg';
-		} else {
-			echo get_option( "def_banner" );
-		}
-		?>
-	<?php endif; ?>
-            );">
-        <div class="inner">
-            <h1 class="post-page-title "><?php the_title(); ?></h1>
-            <p><?php the_time( get_option( 'date_format' ) ); ?> · <?php echo fa_get_post_readtime(); ?>分钟</p>
-        </div>
-    </header><!-- .site-header -->
-<?php } ?>
-
-
-<div id="content" class="site-content">
+    <div id="content" class="site-content">
 
