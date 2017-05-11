@@ -10,7 +10,8 @@
     </p>
 </footer>
 
-
+</div>
+<?php get_template_part( 'inc/mobile-nav' ); ?>
 <a href="#" class="back2top"><i class="iconfont icon-huidaodingbu"></i></a>
 
 <?php wp_footer(); ?>

@@ -79,13 +79,18 @@
 </head>
 
 <body <?php body_class(); ?> itemscope="itemscope" itemtype="https://schema.org/WPPage">
+<div class="site">
 <div id="top-bar">
     <div class="container">
         <div id="nav-wrapper">
 			<?php wp_nav_menu( array( 'container'  => false, 'theme_location' => 'main-menu', 'menu_class' => 'menu'
 			) ); ?>
         </div>
-        <div class="menu-mobile"></div>
+
+        <div id="sidebar-toggle" class="sidebar-toggle">
+            <span></span>
+        </div>
+
 		<?php if ( ! get_theme_mod( 'sp_topbar_search_check' ) ) : ?>
 
             <div id="top-search">

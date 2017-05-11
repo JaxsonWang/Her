@@ -64,24 +64,20 @@ function solopine_load_scripts() {
 
 	// Register scripts and styles
 	wp_register_style( 'sp_style', $get_smiley_url . '/style.css', array(), HER_VERSION, 'all' );
-	wp_register_style( 'slicknav', $get_smiley_url . '/css/slicknav.css', array(), HER_VERSION, 'all' );
 	wp_register_style( 'alifonts', '//at.alicdn.com/t/font_3nut7ugnvto11yvi.css', array(), HER_VERSION, 'all' );
     wp_register_style( 'highlightcss', '//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css', array(),HER_VERSION, 'all' );
 
 	wp_register_script( 'jquery_js', '//cdn.bootcss.com/jquery/1.12.4/jquery.min.js', array(), HER_VERSION, true );
-	wp_register_script( 'slicknav', $get_smiley_url . '/js/jquery.slicknav.min.js', array(), HER_VERSION, true );
 	wp_register_script( 'functions', $get_smiley_url . '/js/functions.js', array(), HER_VERSION, true );
     wp_register_script( 'highlightjs', '//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js',array(), HER_VERSION, true);
 
 	// Enqueue scripts and styles
 	wp_enqueue_style( 'sp_style' );
-	wp_enqueue_style( 'slicknav' );
 	wp_enqueue_style( 'alifonts' );
 	wp_enqueue_style( 'highlightcss' );
 
 	// JS
 	wp_enqueue_script( 'jquery_js' );
-	wp_enqueue_script( 'slicknav' );
 	wp_enqueue_script( 'highlightjs' );
 	wp_enqueue_script( 'functions' );
 

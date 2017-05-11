@@ -62,6 +62,10 @@ body {
     box-sizing: border-box;
 }
 
+*, :after, :before {
+    transition: all 300ms 0ms;
+}
+
 /* Basic */
 body {
     -ms-overflow-style: scrollbar;
@@ -705,6 +709,188 @@ table.alt tbody tr td {
 
 }
 
+/* 手机菜单 */
+.sidebar-toggle {
+    position: relative;
+    padding: 25px 0;
+    cursor: pointer;
+}
+
+.sidebar-toggle span, .sidebar-toggle span:after, .sidebar-toggle span:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 14px;
+    height: 1px;
+    border-radius: 1px;
+    background: #818181;
+    cursor: pointer
+}
+
+.sidebar-toggle span:before {
+    top: -4px
+}
+
+.sidebar-toggle span:after {
+    bottom: -4px
+}
+
+.sidebar-toggle:hover span, .sidebar-toggle:hover span:after, .sidebar-toggle:hover span:before {
+    background: #333
+}
+
+.top-bar-navigation .sidebar-toggle {
+    display: none
+}
+
+div.active.sidebar-toggle span {
+    background-color: transparent
+}
+
+div.active.sidebar-toggle span:after, div.active.sidebar-toggle span:before {
+    top: 0
+}
+
+div.active.sidebar-toggle span:before {
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+div.active.sidebar-toggle span:after {
+    top: 4px;
+    -ms-transform: translateY(-4px) rotate(-45deg);
+    transform: translateY(-4px) rotate(-45deg)
+}
+
+/* 手机侧边栏 */
+.site {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    background: #fff
+}
+
+.mobile-sidebar {
+    width: 320px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: auto;
+    background: #eee;
+    padding: 20px
+}
+
+.admin-bar .mobile-sidebar {
+    top: 32px
+}
+
+@media (max-width: 782px) {
+    .admin-bar .mobile-sidebar {
+        top: 46px
+    }
+}
+
+.mobile-sidebar ul {
+    list-style: none;
+    padding: 0;
+    line-height: 40px;
+    margin-top: 20px;
+}
+
+.mobile-sidebar li:before {
+    margin-right: 5px
+}
+
+.mobile-sidebar li ul {
+    padding-left: 20px
+}
+
+.mobile-sidebar li li {
+    font-size: .9em
+}
+
+.mobile-sidebar .primary-menu-mobile {
+    text-transform: none
+}
+
+.mobile-sidebar .primary-menu-mobile li li {
+    font-size: .9em
+}
+
+.mobile-sidebar .primary-menu-mobile li li a {
+    line-height: 1.5;
+    display: inline-block
+}
+
+.mobile-sidebar .primary-menu-mobile a {
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: block;
+    text-align: center;
+}
+
+.mobile-sidebar .primary-menu-mobile ul {
+    display: none
+}
+
+.mobile-sidebar .dropdown-toggle {
+    font-size: inherit;
+    line-height: inherit;
+    float: right;
+    cursor: pointer
+}
+
+.mobile-sidebar-open .site {
+    transform: translate3d(320px, 0, 0);
+    cursor: pointer
+}
+
+body.mobile-sidebar-open {
+    position: fixed;
+    width: 100%
+}
+
+.mobile-sidebar .author {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.mobile-sidebar .author img {
+    border-radius: 50%;
+}
+
+.mobile-sidebar #searchform,.mobile-sidebar #searchform input {
+    text-align: center;
+}
+
+.mobile-sidebar #searchform input:focus {
+    outline: none;
+}
+
+@media (max-width: 767px) {
+    /* Show mobile toggle icon */
+    .top-bar-navigation .sidebar-toggle {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 359px) {
+    .mobile-sidebar {
+        width: 250px;
+    }
+
+    .mobile-sidebar-open .site {
+        transform: translate3d(250px, 0, 0);
+        cursor: pointer;
+    }
+}
+
+.sidebar-hide {
+    display: none
+}
+
 /* Wrapper */
 
 #wrapper {
@@ -1159,7 +1345,7 @@ table.alt tbody tr td {
 #nav-wrapper ul.menu ul a:hover,
 #nav-wrapper .menu ul ul a:hover {
     color: #C69F73;
-    background: #f5f5f5;
+    background: #eee;
 }
 
 #nav-wrapper ul.menu li:hover > ul,
@@ -1327,7 +1513,7 @@ i.search-toggle {
 .post-entry th {
     font-weight: bold;
     font-size: 14px;
-    background: #f5f5f5;
+    background: #eee;
 }
 
 .post-entry tr:hover {
@@ -2100,11 +2286,10 @@ body ::-moz-selection {
 @media only screen and (max-width: 767px) {
 
     .container {
-        width: 300px;
+        width: 89%;
     }
 
     #content {
-        margin-bottom: 80px;
         padding-top: 20px;
     }
 
