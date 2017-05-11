@@ -87,7 +87,7 @@ body {
 
 body {
     background-color: #f4f4f4;
-    color: #666666;
+    color: #666;
 }
 
 body, input, select, textarea {
@@ -238,7 +238,7 @@ hr.major {
 }
 
 input, select, textarea {
-    color: #444444;
+    color: #444;
 }
 
 a {
@@ -246,19 +246,19 @@ a {
 }
 
 strong, b {
-    color: #444444;
+    color: #444;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #444444;
+    color: #444;
 }
 
 blockquote {
-    border-left-color: #666666;
+    border-left-color: #666;
 }
 
 hr {
-    border-bottom-color: #666666;
+    border-bottom-color: #666;
 }
 
 /* major */
@@ -418,7 +418,7 @@ dl dd {
 }
 
 ul.alt li {
-    border-top-color: #666666;
+    border-top-color: #666;
 }
 
 /* Table */
@@ -479,7 +479,7 @@ table.alt tfoot {
 }
 
 table tbody tr {
-    border-color: #666666;
+    border-color: #666;
 }
 
 table tbody tr:nth-child(2n + 1) {
@@ -487,19 +487,19 @@ table tbody tr:nth-child(2n + 1) {
 }
 
 table th {
-    color: #444444;
+    color: #444;
 }
 
 table thead {
-    border-bottom-color: #666666;
+    border-bottom-color: #666;
 }
 
 table tfoot {
-    border-top-color: #666666;
+    border-top-color: #666;
 }
 
 table.alt tbody tr td {
-    border-color: #666666;
+    border-color: #666;
 }
 
 /* Item */
@@ -1200,7 +1200,7 @@ body.mobile-sidebar-open {
     display: inline-block;
     width: 6em;
     height: 2px;
-    background-color: #666666;
+    background-color: #666;
     margin-bottom: 4em;
 }
 
@@ -1926,7 +1926,7 @@ body ::-moz-selection {
 
 @media screen and (min-width: 760px) {
     .archive-grid {
-        width: 13.66666666666666%;
+        width: 13.66666666%;
     }
 }
 
