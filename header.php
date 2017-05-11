@@ -90,24 +90,6 @@
         <div id="sidebar-toggle" class="sidebar-toggle">
             <span></span>
         </div>
-
-		<?php if ( ! get_theme_mod( 'sp_topbar_search_check' ) ) : ?>
-
-            <div id="top-search">
-				<?php get_search_form(); ?>
-                <i class="iconfont icon-sousuo-sousuo search-desktop"></i>
-                <i class="iconfont icon-sousuo-sousuo search-toggle"></i>
-            </div>
-
-            <!-- Responsive Search -->
-            <div class="show-search">
-				<?php get_search_form(); ?>
-            </div>
-            <!-- -->
-		<?php endif; ?>
-
-		<?php if ( ! get_theme_mod( 'sp_topbar_social_check' ) ) : ?>
-		<?php endif; ?>
     </div>
 
 </div>

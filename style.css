@@ -865,8 +865,15 @@ body.mobile-sidebar-open {
     text-align: center;
 }
 
+.mobile-sidebar #searchform input {
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
 .mobile-sidebar #searchform input:focus {
     outline: none;
+    border: 1px solid #eee;
+    border-radius: 5px;
 }
 
 @media (max-width: 767px) {
@@ -1198,7 +1205,7 @@ body.mobile-sidebar-open {
 }
 
 #footer .copyright {
-    font-size: 0.8em;
+    font-size: 0.5em;
 }
 
 @media screen and (max-width: 736px) {
@@ -1358,69 +1365,6 @@ body.mobile-sidebar-open {
     left: 100%;
     top: 0;
 }
-
-/*** Top Search ***/
-#top-search {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding-left: 16px;
-    z-index: 999;
-}
-
-#top-search form {
-    display: inline;
-}
-
-#top-search input {
-    border: none;
-    width: 135px;
-    background: transparent;
-}
-
-#top-search input:focus {
-    outline: none;
-}
-
-#top-search i {
-    font-size: 14px;
-    line-height: 51px;
-}
-
-.show-search {
-    display: none;
-}
-
-i.search-toggle {
-    font-size: 14px;
-    line-height: 51px;
-    display: none;
-    cursor: pointer;
-}
-
-.show-search {
-    position: absolute;
-    top: 51px;
-    right: -1px;
-    display: none;
-    z-index: 10000;
-}
-
-.show-search input {
-    width: 190px;
-    background: #FFF;
-    -webkit-box-shadow: 0 5px 4px -4px rgba(190, 190, 190, .1);
-    -moz-box-shadow: 0 5px 4px -4px rgba(190, 190, 190, .1);
-    box-shadow: 0 5px 4px -4px rgba(190, 190, 190, .1);
-    border: 1px solid #eee;
-    padding: 10px 0 10px 10px;
-}
-
-.show-search input:focus {
-    border: 1px solid #ddd;
-    outline: none;
-}
-
 /*** Post ***/
 
 .post-entry img {
@@ -1542,7 +1486,7 @@ i.search-toggle {
     letter-spacing: 2px;
     margin-bottom: 30px;
     font-weight: 700;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
     padding-bottom: 4px;
     display: inline-block;
 }
@@ -1822,7 +1766,7 @@ img.wp-smiley {
 
 #respond input {
     padding: 8px 10px;
-    border: 1px solid #DDD;
+    border: 1px solid #eee;
     margin-right: 10px;
     border-radius: 3px;
     color: #999;
@@ -1841,7 +1785,7 @@ img.wp-smiley {
 
 #respond textarea {
     padding: 14px;
-    border: 1px solid #DDD;
+    border: 1px solid #eee;
     border-radius: 3px;
     width: 95%;
     height: 120px;
@@ -2334,23 +2278,6 @@ body ::-moz-selection {
     .feat-item .post-header .cat a {
         font-size: 8px;
         margin-bottom: 7px;
-    }
-
-    /* Responsive search */
-    #top-search {
-        right: 10px;
-    }
-
-    i.search-desktop {
-        display: none;
-    }
-
-    i.search-toggle {
-        display: inline;
-    }
-
-    #top-search #s {
-        display: none;
     }
 
     /* Responsive Menu */
