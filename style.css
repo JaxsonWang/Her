@@ -1155,6 +1155,28 @@ body.mobile-sidebar-open {
 #cta {
     padding: 2em 0 0.1em 0;
     text-align: center;
+    background-color: #fff;
+    margin-bottom: 25px;
+}
+
+.actions .read-more{
+    font-size:10px;
+    letter-spacing:2px;
+    color:#000;
+    background:#fff;
+    font-weight:700;
+    display:inline-block;
+    padding:12px 26px 13px;
+    border:1px solid;
+    border-color: #c69f73;
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+}
+.actions .read-more:hover {
+    background: #c69f73;
+    color: #fff;
 }
 
 @media screen and (max-width: 736px) {
@@ -1229,11 +1251,6 @@ body.mobile-sidebar-open {
     margin-top: 2px;
     margin-bottom: 2px;
     text-align: center
-}
-
-.special {
-    max-width: 640px;
-    margin: 0 auto;
 }
 
 .block-postMeta {
@@ -1373,8 +1390,35 @@ body.mobile-sidebar-open {
     top: 0;
 }
 
-/*** Post ***/
+/*** Top Search ***/
+#top-search {
+    position:absolute;
+    right:0;
+    top:0;
+    padding-left:16px;
+    z-index:999;
+}
 
+#top-search form {
+    display:inline;
+}
+
+#top-search input {
+    border:none;
+    width:135px;
+    background:transparent;
+}
+
+#top-search input:focus {
+    outline:none;
+}
+
+#top-search i {
+    font-size:14px;
+    line-height:51px;
+}
+
+/*** Post ***/
 .post-entry img {
     margin: 0 auto;
     clear: both;
@@ -2185,12 +2229,6 @@ body ::-moz-selection {
         max-width: 100%;
     }
 
-    /* Featured area */
-    .feat-item {
-        height: 574px;
-        padding: 15.2% 28.5%;
-    }
-
 }
 
 @media only screen and (min-width: 768px) and (max-width: 960px) {
@@ -2212,16 +2250,6 @@ body ::-moz-selection {
 
     #logo img {
         max-width: 100%;
-    }
-
-    /* Featured area */
-    .feat-item {
-        height: 444px;
-        padding: 12.2% 25.5%;
-    }
-
-    .feat-item .post-header h2 a {
-        font-size: 22px;
     }
 
     /* Responsive Menu */
@@ -2257,35 +2285,8 @@ body ::-moz-selection {
         max-width: 100%;
     }
 
-    /* Featured area */
-    .feat-item {
-        height: 220px;
-        padding: 16.2% 16.5%;
-    }
-
-    .feat-item .read-more {
+    #top-search {
         display: none;
-    }
-
-    .feat-item .post-header .date {
-        display: none;
-    }
-
-    .feat-item .post-header .date {
-        margin-bottom: 0;
-    }
-
-    .feat-item .post-header h2 a {
-        font-size: 15px;
-    }
-
-    .feat-item .post-header h2 {
-        margin-bottom: 0;
-    }
-
-    .feat-item .post-header .cat a {
-        font-size: 8px;
-        margin-bottom: 7px;
     }
 
     /* Responsive Menu */
@@ -2349,27 +2350,8 @@ body ::-moz-selection {
             width: 480px;
         }
 
-        /* Featured area */
-        .feat-item {
-            height: 310px;
-            padding: 14.2% 20.5%;
-        }
-
-        .feat-item .post-header .date {
-            display: block;
-        }
-
-        .feat-item .post-header h2 {
-            margin-bottom: 14px;
-        }
-
-        .feat-item .post-header .cat a {
-            font-size: 10px;
-            margin-bottom: 12px;
-        }
-
-        .feat-item .post-header h2 a {
-            font-size: 16px;
+        #top-search {
+            display: none;
         }
 
         /* List layout */

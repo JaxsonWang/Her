@@ -91,10 +91,15 @@
 					)
 				); ?>
             </div>
-
             <div id="sidebar-toggle" class="sidebar-toggle">
                 <span></span>
             </div>
+            <!--桌面搜索-->
+            <div id="top-search">
+		        <?php get_search_form(); ?>
+                <i class="iconfont icon-sousuo-sousuo search-desktop"></i>
+            </div>
+
         </div>
 
     </div>
