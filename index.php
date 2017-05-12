@@ -15,8 +15,7 @@
                 <h2><?php echo get_option( 'theme_button_post_title' ); ?></h2>
                 <p><?php echo get_option( 'theme_button_post_meta' ); ?></p>
                 <ul class="actions">
-                    <li><a href="<?php echo get_option( 'theme_button_post_url' ); ?>"
-                           class="read-more"><?php echo get_option( 'theme_button_post_down' ); ?></a></li>
+                    <li><a href="<?php echo get_option( 'theme_button_post_url' ); ?>" class="read-more"><?php echo get_option( 'theme_button_post_down' ); ?></a></li>
                 </ul>
             </section>
 		<?php } ?>

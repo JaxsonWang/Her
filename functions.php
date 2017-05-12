@@ -152,11 +152,11 @@ function solopine_load_scripts() {
 	} else {
 		$get_highlightcss_url = get_option( 'theme_highlight_style' );
 	}
-	// Register scripts and styles
+	//启用样式脚本
 	wp_enqueue_style( 'sp_style', $get_smiley_url . '/style.css', array(), HER_VERSION, 'all' );
 	wp_enqueue_style( 'alifonts', '//at.alicdn.com/t/font_3nut7ugnvto11yvi.css', array(), HER_VERSION, 'all' );
 	wp_enqueue_style( 'highlightcss', $get_highlightcss_url, array(),HER_VERSION, 'all' );
-
+	//启用js脚本
 	wp_enqueue_script( 'jquery_js', '//cdn.bootcss.com/jquery/1.12.4/jquery.min.js', array(), HER_VERSION, true );
 	wp_enqueue_script( 'functions', $get_smiley_url . '/js/functions.js', array(), HER_VERSION, true );
 	wp_enqueue_script( 'highlightjs', '//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js',array(), HER_VERSION, true);
