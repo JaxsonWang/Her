@@ -88,6 +88,13 @@
                     </tr>
 
                     <tr valign="top">
+                        <th scope="row"><label for="theme_highlight_style">前端语法高亮样式</label></th>
+                        <td>
+                            <input type="text" name="theme_highlight_style" id="theme_highlight_style" class="regular-text" value="<?php echo get_option( 'theme_highlight_style' ); ?>"/>
+                        </td>
+                    </tr>
+
+                    <tr valign="top">
                         <th scope="row"><label for="theme_author_post">内页作者模块</label></th>
                         <td>
                             <input type="checkbox" name="theme_author_post"

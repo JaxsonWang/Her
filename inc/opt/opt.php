@@ -16,6 +16,7 @@ function BaseSettings() {
 		update_option( 'theme_button_post_title', isset( $_POST['theme_button_post_title'] ) && $_POST['theme_button_post_title'] ? $_POST['theme_button_post_title'] : '' ); //input
 		update_option( 'theme_qiniucdn', isset( $_POST['theme_qiniucdn'] ) && $_POST['theme_qiniucdn'] ? $_POST['theme_qiniucdn'] : '' ); //input
 		update_option( 'theme_icp_num', isset( $_POST['theme_icp_num'] ) && $_POST['theme_icp_num'] ? $_POST['theme_icp_num'] : '' ); //input
+		update_option( 'theme_highlight_style', isset( $_POST['theme_highlight_style'] ) && $_POST['theme_highlight_style'] ? $_POST['theme_highlight_style'] : '' ); //input
 
 		update_option( 'theme_button_post_meta', isset( $_POST['theme_button_post_meta'] ) && $_POST['theme_button_post_meta'] ? stripslashes($_POST['theme_button_post_meta']) : '' ); //textarea
 		update_option( 'theme_blog_description', isset( $_POST['theme_blog_description'] ) && $_POST['theme_blog_description'] ? stripslashes($_POST['theme_blog_description']) : '' ); //textarea

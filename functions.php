@@ -140,31 +140,26 @@ add_filter( 'get_avatar', 'her_get_ssl_avatar' );
 add_action( 'wp_enqueue_scripts', 'solopine_load_scripts' );
 
 function solopine_load_scripts() {
+	//七牛CDN
 	if (get_option( 'theme_static_qiniucdn' ) == 'checked' ) {
 		$get_smiley_url = get_option( 'theme_qiniucdn' ) . '/her';
 	} else {
 		$get_smiley_url = get_template_directory_uri();
 	}
-
+	//语法高亮
+	if (get_option( 'theme_highlight_style' ) == '' ) {
+		$get_highlightcss_url = '//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css';
+	} else {
+		$get_highlightcss_url = get_option( 'theme_highlight_style' );
+	}
 	// Register scripts and styles
-	wp_register_style( 'sp_style', $get_smiley_url . '/style.css', array(), HER_VERSION, 'all' );
-	wp_register_style( 'alifonts', '//at.alicdn.com/t/font_3nut7ugnvto11yvi.css', array(), HER_VERSION, 'all' );
-    wp_register_style( 'highlightcss', '//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css', array(),HER_VERSION, 'all' );
+	wp_enqueue_style( 'sp_style', $get_smiley_url . '/style.css', array(), HER_VERSION, 'all' );
+	wp_enqueue_style( 'alifonts', '//at.alicdn.com/t/font_3nut7ugnvto11yvi.css', array(), HER_VERSION, 'all' );
+	wp_enqueue_style( 'highlightcss', $get_highlightcss_url, array(),HER_VERSION, 'all' );
 
-	wp_register_script( 'jquery_js', '//cdn.bootcss.com/jquery/1.12.4/jquery.min.js', array(), HER_VERSION, true );
-	wp_register_script( 'functions', $get_smiley_url . '/js/functions.js', array(), HER_VERSION, true );
-    wp_register_script( 'highlightjs', '//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js',array(), HER_VERSION, true);
-
-	// Enqueue scripts and styles
-	wp_enqueue_style( 'sp_style' );
-	wp_enqueue_style( 'alifonts' );
-	wp_enqueue_style( 'highlightcss' );
-
-	// JS
-	wp_enqueue_script( 'jquery_js' );
-	wp_enqueue_script( 'highlightjs' );
-	wp_enqueue_script( 'functions' );
-
+	wp_enqueue_script( 'jquery_js', '//cdn.bootcss.com/jquery/1.12.4/jquery.min.js', array(), HER_VERSION, true );
+	wp_enqueue_script( 'functions', $get_smiley_url . '/js/functions.js', array(), HER_VERSION, true );
+	wp_enqueue_script( 'highlightjs', '//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js',array(), HER_VERSION, true);
 }
 
 //添加设置菜单，注意add_menu_page和add_submenu_page的写法
