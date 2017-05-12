@@ -35,8 +35,11 @@
 
     <div id="wrapper">
         <section id="content" class="main items">
-
-
+		    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			    <?php get_template_part( 'inc/content-grid', 'page' ); ?>
+		    <?php endwhile; ?>
+			    <?php solopine_pagination(); ?>
+		    <?php endif; ?>
         </section>
     </div>
 
