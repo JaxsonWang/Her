@@ -109,9 +109,11 @@
 		        <?php else : ?>
 			        <?php
 			        if ( get_option( 'def_banner' ) == '' ) {
-				        echo get_template_directory_uri() . '/img/banner.jpg';
-			        } else if ( get_option( 'theme_static_qiniucdn' ) == 'checked' ) {
-				        echo get_option( 'theme_qiniucdn' ) . '/her/img/banner.jpg';
+				        if (get_option( 'theme_static_qiniucdn' ) == 'checked') {
+					        echo get_option( 'theme_qiniucdn' ) . '/her/img/banner.jpg';
+				        } else {
+					        echo get_template_directory_uri() . '/img/banner.jpg';
+				        }
 			        } else {
 				        echo get_option( "def_banner" );
 			        }
@@ -127,4 +129,3 @@
 
 
     <div id="content" class="site-content">
-
