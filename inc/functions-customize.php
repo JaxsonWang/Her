@@ -181,7 +181,7 @@ function record_visitors() {
 }
 add_action( 'wp_head', 'record_visitors' );
 
-// 文章内链 by bigfa
+// 引用文章
 function fa_insert_posts( $atts, $content = null ){
 	extract( shortcode_atts( array(
 
