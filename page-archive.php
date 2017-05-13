@@ -72,8 +72,8 @@
 					$post_mon                                   = get_the_time( 'm' );
 					$posts_rebuild[ $post_year ][ $post_mon ][] = '
                         <li class="archive-item">
-                            <a class=".archive-item-title" href="' . get_permalink() . '">' . get_the_title() . '</a>
-                            <span class="archive-item-meta"> - ' . get_comments_number( '0', '1', '%' ) . ' 条评论</span>
+                            <a class="archive-item-title" href="' . get_permalink() . '">' . get_the_title() . '</a>
+                            <span class="archive-item-meta"> ' . get_comments_number( '0', '1', '%' ) . ' 条评论</span>
                         </li>
                         ';
 				endwhile;

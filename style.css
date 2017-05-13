@@ -2022,20 +2022,32 @@ body ::-moz-selection {
 }
 
 .archive-item {
-    padding: 0 0 0 0 !important;
     font-size: 14px;
-    color: rgba(0, 0, 0, .6);
 }
 
 .archive-comments-count {
     font-size: 12px;
     color: rgba(0, 0, 0, .44);
-    text-align: right;
+    text-align: center;
 }
 
 .archive-floatRight {
     float: right;
 }
+
+ul.archive-posts li.archive-item a.archive-item-title {
+    display: block;
+    padding: 8px 0;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+
+ul.archive-posts li.archive-item span.archive-item-meta {
+    float: right;
+    font-size: 12px;
+    font-style: normal;
+}
+
 
 /*****
 /** 404 Instagram
