@@ -1150,6 +1150,16 @@ body.mobile-sidebar-open {
     font-size: 25px
 }
 
+.post-entry a {
+    color: #c69f73;
+}
+
+.post-entry a:hover {
+    color: #c69f73;
+    font-weight: 600;
+}
+
+
 /* CTA */
 
 #cta {
@@ -1656,6 +1666,11 @@ body.mobile-sidebar-open {
     color: #c69f73;
 }
 
+.post-comments a {
+    color: #c69f73;
+    font-weight: 600;
+}
+
 .post-comments a:hover {
     text-decoration: none;
     text-shadow: none;
@@ -1725,8 +1740,7 @@ body.mobile-sidebar-open {
 .post-comments span.reply a {
     float: right;
     font-size: 10px;
-    background-color: #444;
-    color: #FFF;
+    color: #c69f73;
     padding: 2px 5px 4px 5px;
     border-radius: 3px;
     margin-left: 7px;
@@ -1737,12 +1751,9 @@ body.mobile-sidebar-open {
     transition: .3s;
 }
 
-.post-comments span.reply a.comment-edit-link {
-    background: #444;
-}
-
 .post-comments span.reply a:hover {
-    opacity: .8;
+    background-color: #c69f73;
+    color: #fff;
 }
 
 .post-comments ul.children {
