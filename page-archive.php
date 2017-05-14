@@ -86,7 +86,7 @@
 					foreach ( $value as $key_m => $value_m ) {
 						$output .= '
                             <p class="archive-month">' . $year . ' - ' . $key_m . '
-                                <a class="archive-floatRight" href="/date/' . $year . '/' . $key_m . '">查看当月全部文章</a>
+                                <a class="archive-floatRight" href="' . $year . '/' . $key_m . '">查看当月全部文章</a>
                             </p>
                             <ul class="archive-posts">
                             ';
