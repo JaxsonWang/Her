@@ -1311,6 +1311,13 @@ body.mobile-sidebar-open {
     -webkit-backface-visibility: hidden;
 }
 
+@media screen and (max-width: 980px) {
+    #top-bar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 #top-bar .container {
     position: relative;
 }

@@ -9,7 +9,7 @@
             <div class="full-content">
                 <div class="archive-review">
                     <div class="archive-year">
-                        <h2>永远年轻，永远热泪盈眶</h2>
+                        <h2><?php the_author_meta( 'description' ); ?></h2>
                     </div>
                     <div class="archive-grid">
                         <div class="iconxxx">
