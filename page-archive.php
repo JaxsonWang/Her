@@ -15,7 +15,7 @@
                         <div class="iconxxx">
                             <i class="iconfont icon-dianyuan"></i>
                         </div>
-                        <span><?php echo floor( ( time() - strtotime( "2014-04-02" ) ) / 86400 ); ?>天</span>
+                        <span><?php echo floor( ( time() - strtotime( get_option('theme_birthday') ) ) / 86400 ); ?>天</span>
                         <p class="block-postMeta"></p>
                     </div>
                     <div class="archive-grid">

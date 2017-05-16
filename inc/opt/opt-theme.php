@@ -95,6 +95,13 @@
                     </tr>
 
                     <tr valign="top">
+                        <th scope="row"><label for="theme_birthday">网站出生</label></th>
+                        <td>
+                            <input type="text" name="theme_birthday" id="theme_birthday" class="regular-text" value="<?php echo get_option( 'theme_birthday' ); ?>"/>
+                        </td>
+                    </tr>
+
+                    <tr valign="top">
                         <th scope="row"><label for="theme_author_post">内页作者模块</label></th>
                         <td>
                             <input type="checkbox" name="theme_author_post"
