@@ -208,7 +208,6 @@ pre code {
 hr {
     border: 0;
     border-bottom: solid 1px;
-    margin: 2em 0;
 }
 
 hr.major {
@@ -1451,22 +1450,19 @@ body.mobile-sidebar-open {
 }
 
 .post-entry hr {
-    margin-top: 30px;
-    margin-bottom: 30px;
     display: block;
     border: 0;
     text-align: center;
+    height: 20px;
+    line-height: 0;
 }
 
 .post-entry hr:before {
-    content: '...';
-    display: inline-block;
-    margin-left: .6em;
+    content: '....';
     color: rgba(0, 0, 0, .4);
-    position: relative;
-    top: -5px;
     font-size: 28px;
-    letter-spacing: .6em
+    letter-spacing: 1em;
+    font-weight: 600;
 }
 
 .post-entry blockquote {
