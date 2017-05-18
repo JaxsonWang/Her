@@ -1155,7 +1155,6 @@ body.mobile-sidebar-open {
 
 .post-entry a:hover {
     color: #c69f73;
-    font-weight: 600;
 }
 
 
@@ -1475,10 +1474,6 @@ body.mobile-sidebar-open {
     font-size: 14px;
     line-height: 24px;
     color: #999;
-}
-
-.post-entry a:hover {
-    text-decoration: underline;
 }
 
 .post-entry ul, .post-entry ol {
@@ -2234,6 +2229,7 @@ ul.archive-posts li.archive-item span.archive-item-meta {
     line-height: 1.2;
     display: block;
     font-size: 14px;
+    font-style: normal;
 }
 
 .aaronipmeta {
