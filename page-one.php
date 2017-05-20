@@ -45,16 +45,6 @@ function get_file($url)
 <section id="primary" class="content-area">
     <main class="full-page">
         <div class="full-content">
-            <div>
-		        <?php
-		        // Start the loop.
-		        while ( have_posts() ) : the_post();
-			        // Include the page content template.
-			        get_template_part( 'inc/content-single', 'page' );
-			        // End of the loop.
-		        endwhile;
-		        ?>
-            </div>
             <div class="akina_one">
                 <div class="akina_one_image">
                     <img src="<?php echo get_stylesheet_directory_uri() .'/inc/one/img.php'; ?>" alt="One一个绘图"/>
@@ -70,6 +60,16 @@ function get_file($url)
                         <div class="year"><span><?php echo date('M',get_the_time('U'));?></span><?php echo date('Y');?></div>
                     </div><!--日期-->
                 </div><!--One一句-->
+            </div>
+            <div>
+		        <?php
+		        // Start the loop.
+		        while ( have_posts() ) : the_post();
+			        // Include the page content template.
+			        get_template_part( 'inc/content-single', 'page' );
+			        // End of the loop.
+		        endwhile;
+		        ?>
             </div>
         </div>
     </main>

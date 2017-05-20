@@ -2238,6 +2238,54 @@ ul.archive-posts li.archive-item span.archive-item-meta {
     color: rgba(0, 0, 0, .8)
 }
 
+/*One样式表*/
+.akina_one .akina_one_image {
+    text-align: center;
+}
+
+.akina_one .akina_one_image img {
+    width: 100%;
+}
+
+.akina_one .akina_one_main {
+    background-color: #f2f2f2;
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.akina_one .akina_one_text {
+    padding: 5%;
+    width: 80%;
+}
+
+.akina_one .akina_one_title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.akina_one .akina_one_content {
+    text-indent: 2em;
+}
+
+.akina_one .akina_one_time {
+    width: 20%;
+    padding-right: 5%;
+    text-align: center;
+    margin: auto 0;
+}
+
+.akina_one_time div.date {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 50px;
+}
+
+.akina_one_time div.year span {
+    margin-right: 5px;
+}
+
 @media screen and (max-width: 760px) {
     .aaroninpostsbox {
         padding: 12px
