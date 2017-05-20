@@ -57,7 +57,7 @@ function get_file($url)
             </div>
             <div class="akina_one">
                 <div class="akina_one_image">
-                    <img src="<?php echo get_stylesheet_directory_uri() .'/layouts/one/img.php'; ?>" alt="One一个绘图"/>
+                    <img src="<?php echo get_stylesheet_directory_uri() .'/inc/one/img.php'; ?>" alt="One一个绘图"/>
                 </div><!--One图片-->
                 <div class="akina_one_main">
                     <div class="akina_one_text">
