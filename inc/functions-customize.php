@@ -195,10 +195,7 @@ function fa_insert_posts( $atts, $content = null ){
 	$inset_posts = get_posts(array('post__in'=>$postids));
 	foreach ($inset_posts as $key => $post) {
 		setup_postdata( $post );
-		$content .=  '
-
-<div class="aaroninpostsbox"><div class="aaroninpostsimg"><a href="' . get_permalink() . '" target="_blank" class="mixipImage" >' . get_the_post_thumbnail() . '</a></div><a href="' . get_permalink() . '" target="_blank"><span class="aaroninpostsbox-strong">' . get_the_title() . '</span></a><em class="aaronipem">' . get_the_excerpt() . '...</em><div class="aaronipmeta"><br />发表于 ' . get_the_date() . ' - ' . get_comments_number(). ' 条评论.</div></div>
-';
+		$content .=  '<div class="aaroninpostsbox"><div class="aaroninpostsimg"><a href="' . get_permalink() . '" target="_blank" class="mixipImage" >' . get_the_post_thumbnail() . '</a></div><a href="' . get_permalink() . '" target="_blank"><span class="aaroninpostsbox-strong">' . get_the_title() . '</span></a><em class="aaronipem">' . get_the_excerpt() . '...</em><div class="aaronipmeta"><br />发表于 ' . get_the_date() . ' - ' . get_comments_number(). ' 条评论.</div></div>';
 	}
 	wp_reset_postdata();
 	return $content;
