@@ -82,7 +82,7 @@ function sp_string_limit_words( $string, $word_limit ) {
 function mutheme_time_since( $older_date, $comment_date = false ) {
 	$chunks = array(
 		array( 24 * 60 * 60, __( ' 天前' ) ),
-		array( 60 * 60, __( '  小时前' ) ),
+		array( 60 * 60, __( ' 小时前' ) ),
 		array( 60, __( ' 分钟前' ) ),
 		array( 1, __( ' 秒前' ) )
 	);
