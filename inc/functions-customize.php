@@ -39,6 +39,27 @@ function solopine_comments( $comment, $args, $depth ) {
 	<?php
 }
 
+if(!function_exists('comment_err')) :
+
+	function comment_err($a) {
+		header('HTTP/1.0 500 Internal Server Error');
+		header('Content-Type: text/plain;charset=UTF-8');
+		echo $a;
+		exit;
+	}
+
+endif;
+
+// 纯英文评论拦截
+function mimelove_comment_post( $incoming_comment ) {
+	if(!preg_match('/[一-龥]/u', $incoming_comment['comment_content'])){
+		comment_err('请用汉语编写评论！');
+	}
+	return( $incoming_comment );
+}
+
+add_filter('preprocess_comment', 'mimelove_comment_post');
+
 //分页
 function solopine_pagination() {
 	?>
