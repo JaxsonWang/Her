@@ -52,12 +52,6 @@ jQuery(document).ready(function ($) {
         }, 400);
         return false
     });
-
-    //语法高亮
-    hljs.initHighlightingOnLoad();
-    $("pre code").each(function (i, block) {
-        hljs.highlightBlock(block);
-    });
 });
 //修复禁用滚动条丢失的问题
 var ModalHelper = (function(bodyCls) {

@@ -146,11 +146,17 @@ function solopine_load_scripts() {
 	} else {
 		$get_smiley_url = get_template_directory_uri();
 	}
-	//语法高亮
+	//语法高亮-css
 	if (get_option( 'theme_highlight_style' ) == '' ) {
-		$get_highlightcss_url = '//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css';
+		$get_highlightcss_url = get_template_directory_uri() . '/prism/prism.css';
 	} else {
 		$get_highlightcss_url = get_option( 'theme_highlight_style' );
+	}
+	//语法高亮-js
+	if (get_option( 'theme_highlight_javascript' ) == '' ) {
+		$get_highlightjs_url = get_template_directory_uri() . '/prism/prism.js';
+	} else {
+		$get_highlightjs_url = get_option( 'theme_highlight_javascript' );
 	}
 	//启用样式脚本
 	wp_enqueue_style( 'sp_style', $get_smiley_url . '/style.css', array(), HER_VERSION, 'all' );
@@ -159,7 +165,7 @@ function solopine_load_scripts() {
 	//启用js脚本
 	wp_enqueue_script( 'jquery_js', '//cdn.bootcss.com/jquery/1.12.4/jquery.min.js', array(), HER_VERSION, true );
 	wp_enqueue_script( 'functions', $get_smiley_url . '/js/functions.js', array(), HER_VERSION, true );
-	wp_enqueue_script( 'highlightjs', '//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js',array(), HER_VERSION, true);
+	wp_enqueue_script( 'highlightjs', $get_highlightjs_url ,array(), HER_VERSION, true);
 }
 
 //添加设置菜单，注意add_menu_page和add_submenu_page的写法
