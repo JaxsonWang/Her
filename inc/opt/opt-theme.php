@@ -88,20 +88,6 @@
                     </tr>
 
                     <tr valign="top">
-                        <th scope="row"><label for="theme_highlight_style">前端语法高亮样式</label></th>
-                        <td>
-                            <input type="text" name="theme_highlight_style" id="theme_highlight_style" class="regular-text" value="<?php echo get_option( 'theme_highlight_style' ); ?>"/>
-                        </td>
-                    </tr>
-
-                    <tr valign="top">
-                        <th scope="row"><label for="theme_highlight_javascript">前端语法高亮脚本</label></th>
-                        <td>
-                            <input type="text" name="theme_highlight_javascript" id="theme_highlight_javascript" class="regular-text" value="<?php echo get_option( 'theme_highlight_javascript' ); ?>"/>
-                        </td>
-                    </tr>
-
-                    <tr valign="top">
                         <th scope="row"><label for="theme_birthday">网站出生</label></th>
                         <td>
                             <input type="text" name="theme_birthday" id="theme_birthday" class="regular-text" value="<?php echo get_option( 'theme_birthday' ); ?>"/>
